@@ -6,7 +6,7 @@ const Criterio = () => {
 
 
     const redBackgroundStyle = {
-        backgroundColor: '#a7d2c2',
+        backgroundColor: '#c9e1f5',
         padding: '10px',
         borderRadius: '5px',
     };

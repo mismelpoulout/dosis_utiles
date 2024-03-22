@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.51e77d30.js",
+    "main.js": "/static/js/main.7489302c.js",
     "static/media/bisolvon.png": "/static/media/bisolvon.077c0b2ef5c7a5fd333c.png",
     "static/media/ambroxol.png": "/static/media/ambroxol.057c7b21688aee78d64b.png",
     "static/media/logo.png": "/static/media/logo.46de5c39903bc8118e60.png",
     "index.html": "/index.html",
-    "main.51e77d30.js.map": "/static/js/main.51e77d30.js.map"
+    "main.7489302c.js.map": "/static/js/main.7489302c.js.map"
   },
   "entrypoints": [
-    "static/js/main.51e77d30.js"
+    "static/js/main.7489302c.js"
   ]
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Typography, ListItem, Menu, MenuItem} from '@mui/material';
+import { Typography, ListItem, Menu, MenuItem } from '@mui/material';
 
 const Izque = () => {
   const [anchorEl1, setAnchorEl1] = useState(null);
@@ -10,11 +10,6 @@ const Izque = () => {
 
   const handleClose1 = () => {
     setAnchorEl1(null);
-  };
-
-  const cardiop = () => {
-    // Implementa la lógica para la función cardiop aquí
-    handleClose1();
   };
 
   const blackBackgroundStyle = {
@@ -37,12 +32,12 @@ const Izque = () => {
         open={Boolean(anchorEl1)}
         onClose={handleClose1}
       >
-        <MenuItem onClick={cardiop}>- Monitorizar a todo paciente con IAM con SDST. </MenuItem>
-        <MenuItem onClick={cardiop}>- AAS 500 mg, vía oral</MenuItem>
-        <MenuItem onClick={cardiop}>- Clopidogrel dosis de carga 300mg vía oral, menor de 75 años</MenuItem>
-        <MenuItem onClick={cardiop}>- Atorvastatina  80mg</MenuItem>
-        <MenuItem onClick={cardiop}>- Oxígeno si saturación menor 90%</MenuItem>
-        <MenuItem onClick={cardiop}>- Nitroglicerina 0,6 mg sublingual (si dolor)</MenuItem>
+        <MenuItem onClick={handleClose1}>- Monitorizar a todo paciente con IAM con SDST. </MenuItem>
+        <MenuItem onClick={handleClose1}>- AAS 500 mg, vía oral</MenuItem>
+        <MenuItem onClick={handleClose1}>- Clopidogrel dosis de carga 300mg vía oral, menor de 75 años</MenuItem>
+        <MenuItem onClick={handleClose1}>- Atorvastatina  80mg</MenuItem>
+        <MenuItem onClick={handleClose1}>- Oxígeno si saturación menor 90%</MenuItem>
+        <MenuItem onClick={handleClose1}>- Nitroglicerina 0,6 mg sublingual (si dolor)</MenuItem>
       </Menu>
     </>
   );
