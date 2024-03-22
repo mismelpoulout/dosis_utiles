@@ -27,6 +27,11 @@ const Suicidio = () => {
     padding: '10px',
     borderRadius: '5px',
   };
+  const blackBackgroundStyle = {
+    backgroundColor: 'green',
+    padding: '10px',
+    borderRadius: '5px',
+  };
 
     return(
         
@@ -42,7 +47,7 @@ const Suicidio = () => {
           open={Boolean(anchorEl1)}
           onClose={handleClose1}
         >
-          <Typography> &nbsp;<b>Escala de riesgo de intento suicida</b></Typography>
+          <Typography style={ redBackgroundStyle}  > &nbsp;<b>Escala de riesgo de intento suicida</b></Typography>
           <MenuItem > &nbsp; &nbsp;-Sexo: +1 varones </MenuItem>
           <MenuItem >&nbsp; &nbsp;-Age (edad) +1 si es menor de 19A 0 mayor de 45A</MenuItem>
           <MenuItem >&nbsp; &nbsp;-Depression </MenuItem>
@@ -53,7 +58,7 @@ const Suicidio = () => {
           <MenuItem >&nbsp; &nbsp;-Organized plan(Plan organizado de Suicidio)</MenuItem>
           <MenuItem >&nbsp; &nbsp;-No spouse(sin pareja estable)</MenuItem>
           <MenuItem >&nbsp; &nbsp;-Sickness(enfermedad somatica)</MenuItem><br/>
-          <Typography>&nbsp;<b>Cada uno de los items suman 1 punto</b></Typography>
+          <Typography style={blackBackgroundStyle}>&nbsp;<b>Cada uno de los items suman 1 punto</b></Typography>
           <br/>
           <MenuItem>&nbsp; &nbsp;0-2 sin riesgo</MenuItem>
           <MenuItem>&nbsp; &nbsp;3-4 bajo riesgo. Seguimiento ambulatorio intensivo.Conciderar ingreso psiquiatrico</MenuItem>
