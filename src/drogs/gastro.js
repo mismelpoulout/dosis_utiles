@@ -9,7 +9,7 @@ const Gastro = () => {
   };
 
   const gastroprotectoresList = [
-    { name: 'VIADIL', details: 'gotas 5mg/ml', dosage: 'Mayores de 12A 20-40 gotas 3-5v/dia, 2-12A 2gotas/año 3-5v/dia, Menores de 2A 1gota/kg/dia',note: 'no dar en Uropatía obstructiva por hipertrofia prostática,o alguna patologia GI' },
+    { name: 'VIADIL', details: 'gotas 5mg/ml;im o ev (Pargeverina Clorhidrato 5 mg/metamizol 2grs)', dosage: 'Mayores de 12A 20-40 gotas 3-5v/dia, 2-12A 2gotas/año 3-5v/dia, Menores de 2A 1gota/kg/dia',note: 'no dar en Uropatía obstructiva por hipertrofia prostática,o alguna patologia GI' },
     { name: 'BUSCAPINA', details: 'gotas 10mg/ml - amp 20mg/ml (dosis max 1,5mg/kg)', dosage: 'Niños 1 mes-4A: 300-600 µg/kg (máx 5 mg/dosis) cada 6-8 horas, 5-11A: 5-10 mg c/6-8 hrs, 12-17A : 10-20 mg c/6-8 hrs',note: 'no dar en:patología uretro-prostática, estenosis GI o ileo paralitico' },
     { name: 'DOMPERIDONA', details: 'gotas, comp 10mg', dosage: '1mg/kg/8-12hrs, 1gota/kg/8-12hrs, 0.2-0.4ml/kg/dosis c/8hrs',note: 'no dar en menores de 10A' },
     { name: 'ONDANSETRON', details: 'amp 4mg/2ml', dosage: '0.1-0.2mg/kg/dosis (en mayores de 6 meses)',note: 'uso concomitante con apomorfina provoca hipotension severa' },

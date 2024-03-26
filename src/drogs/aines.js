@@ -9,6 +9,13 @@ const Aines = () => {
   };
 
   const medicationList = [
+    { 
+    name1: 'AINES',
+     note1: 'IBUPROFENO, DICLOFENACO, KETOROLACO,CELECOXIB,KETOPROFENO,METAMIZOL',
+     name: ' OPIACEOS',
+     note: 'MORFINA, FENTANILO,KETAMINA(derivado de la morfina),TRAMADOL',
+     obse:'los opiaceos no tienen mucha duracion de su efecto a diferencia de la morfina que dura 4hrs pero la accion analgecica no es muy potente por lo que se recomienda COMBINAR con AINES' 
+    },
     { name: 'METAMIZOL', form:'amp 1g/2ml', dosage: '5-8 mg/kg c/6 u 8 hrs', note: 'NO DAR EN MENORES DE 1A' },
     { name: 'IBUPROFENO', form:'jarabe,comp 400-600mg',dosage: '40 mg/kg/día cada 6-8 horas', note: 'Dosis máxima: 2400 mg/día' },
     {
@@ -29,19 +36,33 @@ const Aines = () => {
       dosage: '15 mg/kg c/6 hrs ó 10 mg/kg c/4 hrs',
       note: 'en gotas seria 2 gotas x año de vida',
     },
+    {
+      name: 'CELECOXIB',
+      form:'comp 200mg',
+      dosage: '200MG c/12-24hrs , DOSIS MAXIMA: 400MG/dia',
+      note: 'No dar en EMBARAZO,LACTANCIA y PUEDE PRODUCIR FOTOSENSIBILIDAD',
+    },
+    {
+      name: 'PREGABALINA',
+      form:'comp 75-150mg',
+      dosage: '75mg c/12hrs o 150mg c/24 hrs',
+      note: 'NO DAR MAS DE 150mg/dia',
+      obse: 'No Conducir-Lactancia-Embarazo',
+    },
     
     {
       name: 'KETOPROFENO',
-      form:'amp 100mg',
-      dosage: 'c/12hrs',
+      form:'amp 100mg, comp 50mg',
+      dosage: 'Oral: 50 mg/8-12 h, máx. 200 mg/día. Comp. liberación prolongada: 200 mg/día.;ev 100mg c/12hrs',
       note: 'dosis max 200mg/dia',
+      obse: 'Produce fotosencibilidad- NO DAR en la Lactancia-Embarazo',
     },
     {
       name: 'MORFINA',
       form:'amp 10mg',
       dosage: '0.1 mg/kg/dosis',
       note: 'espasmos bronquiales,TEP,Insuf Cardiaca',
-      obse:'No Conducir-Lactancia-Embarazo',
+      obse:'No Conducir-Lactancia-Embarazo( duracion max 4hrs y se puede conbinar con AINES)',
     },
     {
       name: 'KETAMINA',
@@ -70,13 +91,17 @@ const Aines = () => {
         {medicationList.map((medication, index) => (
           <ListItem key={index}>
             <ListItemText>
+            <Typography variant="subtitle1">
+                <b>{medication.name1}</b>
+              </Typography>
+              <Typography variant="body2">{medication.note1}</Typography>
               <Typography variant="subtitle1">
                 <b>{medication.name}</b>
               </Typography>
               <Typography variant="body2">{medication.dosage}</Typography>
               <Typography variant="body2">{medication.note}</Typography>
               <Typography variant="body2">{medication.form}</Typography>
-              <Typography variant="body2">{medication.obse}</Typography>
+              <Typography variant="body2"><b>{medication.obse}</b></Typography>
             </ListItemText>
           </ListItem>
         ))}
