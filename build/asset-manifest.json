@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.js": "/static/js/main.55c51706.js",
+    "main.css": "/static/css/main.d6e232bc.css",
+    "main.js": "/static/js/main.5ffee515.js",
     "static/media/bisolvon.png": "/static/media/bisolvon.077c0b2ef5c7a5fd333c.png",
     "static/media/ambroxol.png": "/static/media/ambroxol.057c7b21688aee78d64b.png",
     "static/media/logo.png": "/static/media/logo.46de5c39903bc8118e60.png",
+    "static/media/proto.jpg": "/static/media/proto.68dead01eb0764bdc264.jpg",
+    "static/media/guideline.png": "/static/media/guideline.1664cda8d13d7cb18bc2.png",
     "index.html": "/index.html",
-    "main.55c51706.js.map": "/static/js/main.55c51706.js.map"
+    "main.d6e232bc.css.map": "/static/css/main.d6e232bc.css.map",
+    "main.5ffee515.js.map": "/static/js/main.5ffee515.js.map"
   },
   "entrypoints": [
-    "static/js/main.55c51706.js"
+    "static/css/main.d6e232bc.css",
+    "static/js/main.5ffee515.js"
   ]
 }
