@@ -65,19 +65,19 @@ const Navbar = () => {
               }}
             />
           </ListItem>
-          <ListItem button>
-            <ListItemText primary="Nosotros" />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="Politica de privacidad" />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="Contacto" />
-          </ListItem>
-        </List>
-      </Drawer>
-      <Toolbar /> {/* Espaciado para evitar solapamiento con el contenido */}
-    </>
+          <ListItem button component="a" href="/nosotros">
+          <ListItemText primary="Nosotros" />
+        </ListItem>
+        <ListItem button component="a" href="/politica-de-privacidad">
+          <ListItemText primary="Politica de privacidad" />
+        </ListItem>
+        <ListItem button component="a" href="mailto:medstudioparato2@gmail.com?body=Le responderemos a la brevedad">
+          <ListItemText primary="Contacto" />
+        </ListItem>
+      </List>
+    </Drawer>
+    <Toolbar />
+ </>
   );
 };
 
