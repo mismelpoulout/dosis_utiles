@@ -34,7 +34,7 @@ const Izque = () => {
       >
         <MenuItem onClick={handleClose1}>- Monitorizar a todo paciente con IAM con SDST. </MenuItem>
         <MenuItem onClick={handleClose1}>- AAS 500 mg, vía oral</MenuItem>
-        <MenuItem onClick={handleClose1}>- Clopidogrel dosis de carga 300mg vía oral, menor de 75 años</MenuItem>
+        <MenuItem onClick={handleClose1}>- Clopidogrel dosis de carga 300mg vo, menor de 75a</MenuItem>
         <MenuItem onClick={handleClose1}>- Atorvastatina  80mg</MenuItem>
         <MenuItem onClick={handleClose1}>- Oxígeno si saturación menor 90%</MenuItem>
         <MenuItem onClick={handleClose1}>- Nitroglicerina 0,6 mg sublingual (si dolor)</MenuItem>
