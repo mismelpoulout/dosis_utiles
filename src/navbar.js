@@ -9,6 +9,7 @@ import {
   ListItem,
   ListItemText,
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from './logo.png';
 
@@ -17,6 +18,11 @@ const Navbar = () => {
 
   const handleDrawerOpen = () => {
     setOpen(true);
+  };
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate('/');
   };
 
   const handleDrawerClose = () => {
@@ -37,9 +43,15 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            dosis_<strong>Utiles</strong>
-          </Typography>
+          <Typography
+      variant="h5"
+      component="div"
+      sx={{ flexGrow: 1 }}
+      onClick={handleRedirect} // Opcional: Puedes usar un evento onClick para activar la redirección
+      style={{ cursor: 'pointer' }} // Opcional: Cambiar el cursor para indicar que es interactivo
+    >
+      dosis_<strong>Utiles</strong>
+    </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
