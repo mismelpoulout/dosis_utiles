@@ -1,0 +1,106 @@
+/* ======= Carruseles antiguos (si aún los usas) ======= */
+.scroll-carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+}
+.scroll-carousel::-webkit-scrollbar { display: none; }
+
+/* ======= Cards ======= */
+.hover-card {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  border-radius: 1rem;
+}
+.hover-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+.card { min-height: 100%; }
+
+/* ======= Tipografía / espaciado móvil ======= */
+@media (max-width: 576px) {
+  .card-title { font-size: 1rem; }
+  .btn-sm { font-size: .85rem; }
+  .container-fluid { padding-left: .75rem; padding-right: .75rem; }
+}
+
+/* ======= Carrusel infinito sin costuras (InfiniteTabs) ======= */
+.inf-wrap {
+  position: relative;
+  overflow: hidden;              /* ocultamos desborde para el loop sin costuras */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;           /* permite scroll vertical natural */
+  cursor: grab;
+  padding-bottom: .25rem;
+}
+.inf-wrap:active { cursor: grabbing; }
+
+/* Fades laterales para indicar scroll (no afectan interacción) */
+.inf-wrap::before,
+.inf-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 24px;                   /* ancho del fade */
+  pointer-events: none;
+  z-index: 1;
+}
+.inf-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--inf-fade-bg, #fff), transparent);
+}
+.inf-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--inf-fade-bg, #fff), transparent);
+}
+
+/* Pista del carrusel (se mueve con transform) */
+.inf-track {
+  display: inline-flex;
+  gap: .5rem;                    /* espacio entre pills */
+  white-space: nowrap;
+  will-change: transform;
+  min-width: max-content;
+  align-items: center;
+  padding-inline: .25rem;        /* respiración a los lados */
+}
+
+/* Pills del carrusel */
+.inf-track .btn {
+  border-radius: 999px;
+  padding: .45rem 1rem;
+}
+
+/* Accesibilidad: foco visible bonito */
+.inf-track .btn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(13,110,253,.25); /* acorde a Bootstrap primary */
+}
+
+/* ======= Modo oscuro (auto) ======= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --inf-fade-bg: #0b0f14; /* base oscura para el fade lateral */
+  }
+  .hover-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  }
+}
+
+/* ======= Reduce motion ======= */
+@media (prefers-reduced-motion: reduce) {
+  .hover-card {
+    transition: none;
+  }
+  .hover-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* ======= Utilidades opcionales ======= */
+.text-danger-emphasis { color: #dc3545; }          /* por si lo usas en labels */
+.text-primary { color: #0d6efd !important; }       /* asegura tono Bootstrap */
+.rounded-4 { border-radius: 1rem !important; }     /* radios suaves coherentes */

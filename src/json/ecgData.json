@@ -1,0 +1,146 @@
+{
+  "ritmos": [
+    {
+      "id": "sinus",
+      "nombre": "Ritmo sinusal",
+      "color": "#16a34a",
+      "descripcion": "Ritmo regular de 60–100 lpm, ondas P positivas en derivaciones inferiores, intervalo PR 120–200 ms y QRS estrecho. Es el ritmo cardíaco fisiológico normal originado en el nodo sinusal.",
+      "intervencion": "No requiere intervención si el paciente está asintomático. Si hay síntomas (palpitaciones, mareo, dolor torácico), se debe buscar y corregir la causa subyacente: fiebre, hipovolemia, ansiedad, anemia o disfunción tiroidea.",
+      "tratamiento_inicial": "Observación, control de signos vitales y manejo etiológico (hidratación, antipiréticos, analgesia, ansiolíticos o beta bloqueadores suaves si taquicardia sinusal sintomática).",
+      "params": {
+        "bpm": 75,
+        "irregularity": 0,
+        "qrsWidthMs": 90,
+        "pWave": true,
+        "pToQrsRatio": 1,
+        "prMs": 160,
+        "tWave": true,
+        "wideQrs": false
+      }
+    },
+    {
+      "id": "afib_rvr",
+      "nombre": "Fibrilación auricular con respuesta ventricular rápida",
+      "color": "#ef4444",
+      "descripcion": "Ritmo absolutamente irregular sin ondas P identificables; QRS estrecho en la mayoría de los casos. La respuesta ventricular suele ser rápida (120–160 lpm).",
+      "intervencion": "Si el paciente está inestable (hipotensión, angina, insuficiencia cardíaca o alteración de conciencia), realizar cardioversión eléctrica sincronizada inmediata. Si está estable, controlar la frecuencia y evaluar la necesidad de anticoagulación según score CHA₂DS₂-VASc.",
+      "tratamiento_inicial": "Control de frecuencia con betabloqueadores IV (metoprolol) o bloqueadores de canales de calcio (diltiazem, verapamilo) si no hay disfunción sistólica. Si la FA es de inicio reciente (<48 h), considerar cardioversión farmacológica (amiodarona o flecainida) tras descartar trombos. Iniciar anticoagulación si corresponde.",
+      "params": {
+        "bpm": 140,
+        "irregularity": 0.25,
+        "qrsWidthMs": 90,
+        "pWave": false,
+        "tWave": true,
+        "fibrillatoryBaseline": true,
+        "wideQrs": false
+      }
+    },
+    {
+      "id": "svt",
+      "nombre": "Taquicardia supraventricular (AVNRT/AVRT)",
+      "color": "#f59e0b",
+      "descripcion": "Ritmo regular de 150–220 lpm, con QRS estrecho; las ondas P pueden no ser visibles o encontrarse inmediatamente después del QRS.",
+      "intervencion": "Si hay signos de inestabilidad hemodinámica, realizar cardioversión sincronizada. Si está estable, se indican maniobras vagales seguidas de adenosina IV. En casos recurrentes, considerar ablación o antiarrítmicos de mantenimiento.",
+      "tratamiento_inicial": "1) Maniobras vagales (Valsalva, masaje del seno carotídeo). 2) Adenosina IV en bolo rápido (6 mg, luego 12 mg si persiste). 3) Si no revierte o hay recurrencia, administrar beta bloqueadores o calcio antagonistas IV. Monitoreo continuo y evaluación estructural cardíaca.",
+      "params": {
+        "bpm": 180,
+        "irregularity": 0.02,
+        "qrsWidthMs": 90,
+        "pWave": false,
+        "tWave": false,
+        "wideQrs": false
+      }
+    },
+    {
+      "id": "vt_mono",
+      "nombre": "Taquicardia ventricular monomórfica",
+      "color": "#db2777",
+      "descripcion": "Ritmo regular de QRS ancho (>120 ms), frecuencia de 120–220 lpm. Puede observarse disociación AV. Usualmente se asocia a cardiopatía estructural o isquémica.",
+      "intervencion": "Si el paciente está inestable (hipotensión, angina, edema pulmonar), realizar cardioversión sincronizada inmediata. Si hay paro, proceder a desfibrilación. Si está estable, iniciar antiarrítmicos y evaluar causa subyacente.",
+      "tratamiento_inicial": "Amiodarona IV (150 mg en 10 min, luego infusión), alternativa: procainamida o lidocaína. Oxígeno suplementario, monitoreo cardíaco, corrección de electrolitos (K+, Mg2+). Evaluar necesidad de desfibrilador implantable tras estabilización.",
+      "params": {
+        "bpm": 160,
+        "irregularity": 0.03,
+        "qrsWidthMs": 160,
+        "pWave": false,
+        "tWave": false,
+        "wideQrs": true
+      }
+    },
+    {
+      "id": "torsades",
+      "nombre": "TV polimórfica (Torsades de Pointes)",
+      "color": "#7c3aed",
+      "descripcion": "Taquicardia ventricular polimórfica caracterizada por la oscilación de la amplitud del QRS alrededor de la línea isoeléctrica, generalmente en el contexto de un intervalo QT prolongado.",
+      "intervencion": "Administrar sulfato de magnesio IV y corregir causas de prolongación del QT (fármacos, hipokalemia, hipocalcemia). Si el paciente está inestable, realizar desfibrilación.",
+      "tratamiento_inicial": "1) Sulfato de magnesio 2 g IV en bolo lento. 2) Suspender fármacos que prolonguen el QT. 3) Corregir electrolitos (K+, Ca2+). 4) En casos recurrentes, infusión de isoproterenol o marcapasos transitorio para aumentar la frecuencia cardíaca.",
+      "params": {
+        "bpm": 200,
+        "irregularity": 0.05,
+        "qrsWidthMs": 160,
+        "pWave": false,
+        "tWave": false,
+        "wideQrs": true,
+        "amplitudeModulation": true
+      }
+    },
+    {
+      "id": "vfib",
+      "nombre": "Fibrilación ventricular",
+      "color": "#111827",
+      "descripcion": "Actividad eléctrica caótica sin complejos QRS identificables; ausencia de gasto cardíaco efectivo. Corresponde a una parada cardíaca.",
+      "intervencion": "Desfibrilación inmediata y RCP de alta calidad. Continuar protocolo ACLS con administración de adrenalina y amiodarona si persiste.",
+      "tratamiento_inicial": "1) Iniciar RCP de alta calidad inmediatamente. 2) Desfibrilar (bifásico 200 J o monofásico 360 J). 3) Administrar adrenalina 1 mg IV cada 3–5 min y amiodarona 300 mg IV tras tercera descarga. 4) Tratar causas reversibles (5H/5T).",
+      "params": {
+        "bpm": 0,
+        "vfib": true
+      }
+    },
+    {
+      "id": "asystole",
+      "nombre": "Asistolia",
+      "color": "#6b7280",
+      "descripcion": "Línea isoeléctrica sin actividad eléctrica organizada. Ritmo de paro cardíaco no desfibrilable.",
+      "intervencion": "Iniciar RCP inmediata y seguir protocolo ACLS para ritmos no desfibrilables. Buscar causas reversibles (hipoxia, hipovolemia, trombosis, tóxicos, etc.).",
+      "tratamiento_inicial": "RCP de alta calidad, adrenalina 1 mg IV cada 3–5 min, asegurar vía aérea y oxigenación. No desfibrilar. Evaluar causas reversibles (H/T).",
+      "params": {
+        "bpm": 0,
+        "flatline": true
+      }
+    },
+    {
+      "id": "avb3",
+      "nombre": "Bloqueo AV completo (3er grado)",
+      "color": "#0ea5e9",
+      "descripcion": "Disociación auriculoventricular: ondas P y complejos QRS sin relación entre sí. El ritmo de escape puede ser estrecho (nodal) o ancho (ventricular), generalmente entre 30–50 lpm.",
+      "intervencion": "Evaluar estabilidad hemodinámica. Si hay síntomas o bradicardia severa, colocar marcapasos transcutáneo o transvenoso. Corregir causas reversibles (fármacos, isquemia, hipoxia).",
+      "tratamiento_inicial": "1) Atropina 0.5 mg IV cada 3–5 min hasta 3 mg total (si QRS estrecho). 2) Si no hay respuesta o QRS ancho, iniciar estimulación transcutánea o dopamina/adrenalina IV. 3) Preparar marcapasos definitivo si persistente.",
+      "params": {
+        "bpm": 40,
+        "irregularity": 0.05,
+        "qrsWidthMs": 140,
+        "pWave": true,
+        "pToQrsRatio": 0,
+        "tWave": false,
+        "wideQrs": true,
+        "avDissociation": true
+      }
+    },
+    {
+      "id": "flutter",
+      "nombre": "Aleteo auricular (Flutter) con conducción 2:1",
+      "color": "#10b981",
+      "descripcion": "Actividad auricular regular de 250–350 lpm con ondas en sierra típicas en derivaciones inferiores. Conducción ventricular 2:1 da una FC ≈150 lpm.",
+      "intervencion": "Cardioversión eléctrica si el paciente está inestable. Si está estable, control de la frecuencia y anticoagulación similar a FA. Considerar ablación del istmo cavo-tricuspídeo en casos recurrentes.",
+      "tratamiento_inicial": "1) Control de FC con betabloqueadores o diltiazem/verapamilo IV. 2) Anticoagulación según CHA₂DS₂-VASc. 3) Cardioversión eléctrica sincronizada (50–100 J) si sintomático o inestable. 4) Ablación por radiofrecuencia si crónico.",
+      "params": {
+        "bpm": 150,
+        "irregularity": 0.0,
+        "qrsWidthMs": 90,
+        "pWave": false,
+        "flutterSawtooth": true,
+        "tWave": false
+      }
+    }
+  ]
+}

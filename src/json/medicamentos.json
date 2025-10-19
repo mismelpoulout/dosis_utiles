@@ -1,0 +1,1000 @@
+{
+  "Medicamentos": {
+    "ANALGESICOS": {
+      "AINES": [
+        {
+          "nombre": "Metamizol",
+          "dosis": "5-8 mg/kg cada 6-8 h",
+          "maxima": "4 g/día",
+          "presentaciones": [
+            "amp 1 g/2 ml",
+            "comp 500 mg"
+          ],
+          "contraindicaciones": [
+            "Agranulocitosis previa",
+            "Hipersensibilidad a pirazolonas",
+            "No dar en menores de 1 año"
+          ],
+          "notas": "Usar con precaución en insuficiencia renal o hepática"
+        },
+        {
+          "nombre": "Ibuprofeno",
+          "dosis": "40 mg/kg/día cada 6-8 h (máx 10 mg/kg/dosis)",
+          "maxima": "2400 mg/día",
+          "presentaciones": [
+            "jarabe 100 mg/5 ml",
+            "comp 400-600 mg"
+          ],
+          "contraindicaciones": [
+            "Úlcera péptica activa",
+            "Insuficiencia renal grave",
+            "Embarazo (3er trimestre)"
+          ],
+          "notas": "Administrar después de comidas"
+        },
+        {
+          "nombre": "Diclofenaco",
+          "dosis": "Niños 1-12A: 0,5-3 mg/kg/día c/6-12 h; >12A: 50 mg c/8-12 h; mantención 50 mg c/12 h",
+          "maxima": "150 mg/día",
+          "presentaciones": [
+            "sup 12.5-50 mg",
+            "comp 50-100 mg",
+            "amp 75 mg/3 ml"
+          ],
+          "contraindicaciones": [
+            "Úlcera o sangrado digestivo",
+            "Insuficiencia hepática o renal severa"
+          ],
+          "notas": "No usar más de 5 días sin control médico"
+        },
+        {
+          "nombre": "Ketorolaco",
+          "dosis": "VO 10 mg c/8 h; EV/IM 30-60 mg/día",
+          "maxima": "60 mg/día",
+          "presentaciones": [
+            "comp 10 mg",
+            "amp 30 mg/ml"
+          ],
+          "contraindicaciones": [
+            "Úlcera o sangrado GI",
+            "Insuficiencia renal",
+            "Embarazo y lactancia"
+          ],
+          "notas": "Uso máximo 5 días; potente analgésico no opioide"
+        },
+        {
+          "nombre": "Paracetamol",
+          "dosis": "15 mg/kg c/6 h o 10 mg/kg c/4 h",
+          "maxima": "60 mg/kg/día (máx 4 g/día en adultos)",
+          "presentaciones": [
+            "comp 500 mg",
+            "gotas 100 mg/ml",
+            "jarabe 120 mg/5 ml"
+          ],
+          "contraindicaciones": [
+            "Insuficiencia hepática severa"
+          ],
+          "notas": "En gotas: 2 gotas por año de vida; ajustar en hepatopatía"
+        },
+        {
+          "nombre": "Celecoxib",
+          "dosis": "200 mg c/12-24 h",
+          "maxima": "400 mg/día",
+          "presentaciones": [
+            "comp 200 mg"
+          ],
+          "contraindicaciones": [
+            "Embarazo",
+            "Lactancia",
+            "Alergia a sulfonamidas"
+          ],
+          "notas": "COX-2 selectivo; menor riesgo GI; evitar en cardiopatías"
+        },
+        {
+          "nombre": "Pregabalina",
+          "dosis": "75 mg c/12 h o 150 mg c/24 h",
+          "maxima": "600 mg/día",
+          "presentaciones": [
+            "comp 75 mg",
+            "comp 150 mg"
+          ],
+          "contraindicaciones": [
+            "Hipersensibilidad al fármaco",
+            "Lactancia",
+            "Embarazo"
+          ],
+          "notas": "Efectos adversos: somnolencia, mareo, visión borrosa"
+        },
+        {
+          "nombre": "Ketoprofeno",
+          "dosis": "VO 50 mg c/8-12 h; máx 200 mg/día. LP: 200 mg/día. EV 100 mg c/12 h",
+          "maxima": "200 mg/día",
+          "presentaciones": [
+            "amp 100 mg",
+            "comp 50 mg",
+            "cáps LP 200 mg"
+          ],
+          "contraindicaciones": [
+            "Úlcera o sangrado GI",
+            "Lactancia",
+            "Embarazo (3er trimestre)"
+          ],
+          "notas": "Puede causar fotosensibilidad; tomar con alimentos"
+        }
+      ],
+      "OPIACEOS": [
+        {
+          "nombre": "Morfina",
+          "dosis": "0.1 mg/kg/dosis cada 4 h (máx 10 mg por dosis)",
+          "maxima": "60 mg/día en adultos",
+          "presentaciones": [
+            "amp 10 mg/ml",
+            "amp 20 mg/ml",
+            "comp 10-30 mg"
+          ],
+          "contraindicaciones": [
+            "Depresión respiratoria",
+            "TEP",
+            "Insuficiencia hepática severa",
+            "Embarazo y lactancia"
+          ],
+          "notas": "Duración aprox 4 h; analgesia potente; combinar con AINES para efecto sinérgico"
+        },
+        {
+          "nombre": "Fentanilo",
+          "dosis": "1-2 mcg/kg/dosis EV/IM cada 30-60 min según respuesta",
+          "maxima": "200 mcg/día en adultos sin tolerancia",
+          "presentaciones": [
+            "amp 0.1 mg/2 ml",
+            "amp 0.5 mg/10 ml",
+            "parche TD 25-100 mcg/h"
+          ],
+          "contraindicaciones": [
+            "Depresión respiratoria",
+            "Uso concomitante con IMAO"
+          ],
+          "notas": "Inicio rápido (1-2 min EV); duración 30-60 min; útil en analgesia de rescate"
+        },
+        {
+          "nombre": "Ketamina",
+          "dosis": "Analgesia: 0.1-0.3 mg/kg EV; Sedación: 0.5-1 mg/kg EV; Inducción: 1-4.5 mg/kg",
+          "maxima": "6 mg/kg por procedimiento",
+          "presentaciones": [
+            "solución 50 mg/ml",
+            "amp 100 mg/ml"
+          ],
+          "contraindicaciones": [
+            "Hipertensión severa",
+            "Eclampsia",
+            "Embarazo"
+          ],
+          "notas": "Inicio 30 s EV; duración 5-15 min; puede causar alucinaciones o sialorrea"
+        },
+        {
+          "nombre": "Tramadol",
+          "dosis": "50-100 mg c/6-8 h VO; niños 1-2 mg/kg/dosis c/6-8 h",
+          "maxima": "400 mg/día",
+          "presentaciones": [
+            "comp 50 mg",
+            "amp 100 mg/2 ml",
+            "gotas 100 mg/ml"
+          ],
+          "contraindicaciones": [
+            "Epilepsia no controlada",
+            "Uso con ISRS/IMAO"
+          ],
+          "notas": "Analgesia moderada; riesgo de náuseas y somnolencia; evitar con otros opioides"
+        }
+      ],
+      "COMBINACIONES_ALIVIO_DOLOR": [
+        {
+          "nombre": "Dolor leve–moderado (primer escalón)",
+          "indicacion": "EVA/NRS 3–6 sin signos de alarma",
+          "esquema": [
+            "Paracetamol 1 g EV en 15 min",
+            "± Ketorolaco 30 mg EV (15 mg si >65 a o ERC)",
+            "Reevaluar a los 20–30 min"
+          ],
+          "precauciones": [
+            "Ajustar paracetamol en hepatopatía/fragilidad",
+            "Evitar AINE en úlcera/IRC/sangrado activo/embarazo 3er trimestre"
+          ]
+        },
+        {
+          "nombre": "Dolor moderado–severo (rescate rápido)",
+          "indicacion": "EVA/NRS ≥7 con estabilidad hemodinámica",
+          "esquema": [
+            "Paracetamol 1 g EV",
+            "Fentanilo 25–50 µg EV cada 5 min hasta control",
+            "± Ketorolaco 15–30 mg EV si no hay contraindicaciones"
+          ],
+          "precauciones": [
+            "Monitorizar FR/SatO2/PA",
+            "Evitar en depresión respiratoria o uso reciente de IMAO"
+          ]
+        },
+        {
+          "nombre": "Dolor severo sostenido (opioide de acción más prolongada)",
+          "indicacion": "Necesidad de control mantenido",
+          "esquema": [
+            "Morfina 2–4 mg EV cada 5–10 min (titulación) hasta EVA ≤3",
+            "Antiemético: Ondansetrón 4 mg EV si náuseas",
+            "Plan de mantenimiento según protocolo local"
+          ],
+          "precauciones": [
+            "Riesgo de depresión respiratoria",
+            "Ajustar en insuficiencia renal/hepática"
+          ]
+        },
+        {
+          "nombre": "Cólico renal",
+          "indicacion": "Dolor tipo cólico, litiasis sospechada",
+          "esquema": [
+            "Ketorolaco 30 mg EV (15 mg si >65 a/ ERC)",
+            "± Butilescopolamina 20 mg EV",
+            "Rescate: Fentanilo 25–50 µg EV o Morfina 2–4 mg EV"
+          ],
+          "precauciones": [
+            "Hidratación guiada por estado hemodinámico",
+            "Evitar AINE si ERC/ulcera activa"
+          ]
+        },
+        {
+          "nombre": "Cólico biliar",
+          "indicacion": "Dolor en HD, colelitiasis",
+          "esquema": [
+            "Diclofenaco 75 mg IM/EV o Ketorolaco 30 mg EV",
+            "± Butilescopolamina 20 mg EV",
+            "Rescate: Fentanilo 25–50 µg EV (evitar morfina si espasmo de Oddi)"
+          ],
+          "precauciones": [
+            "Valorar ecografía y signos de colecistitis/colangitis"
+          ]
+        },
+        {
+          "nombre": "Migraña/cefalea intensa",
+          "indicacion": "Cefalea primaria sin signos de alarma",
+          "esquema": [
+            "Metoclopramida 10 mg EV lento",
+            "Ketorolaco 30 mg EV",
+            "± Dexametasona 8 mg EV (reduce recurrencia)"
+          ],
+          "precauciones": [
+            "Evitar opioides",
+            "Descartar cefalea secundaria (red flags)"
+          ]
+        },
+        {
+          "nombre": "Trauma sin inestabilidad",
+          "indicacion": "Dolor por fractura/esguince sin shock",
+          "esquema": [
+            "Fentanilo 25–50 µg EV cada 5 min hasta control",
+            "± Paracetamol 1 g EV",
+            "Considerar bloqueo regional (p. ej., fascia iliaca)"
+          ],
+          "precauciones": [
+            "Monitorizar constantes",
+            "Coordinar con trauma/cirugía"
+          ]
+        },
+        {
+          "nombre": "Contraindicación a AINE",
+          "indicacion": "Úlcera, ERC, anticoagulación, embarazo tardío",
+          "esquema": [
+            "Paracetamol 1 g EV",
+            "Fentanilo 25–50 µg EV o Morfina 2–4 mg EV",
+            "± Metamizol 1 g EV si disponible y sin contraindicaciones"
+          ],
+          "precauciones": [
+            "Vigilar hipotensión con metamizol",
+            "Ajustar dosis en fragilidad"
+          ]
+        },
+        {
+          "nombre": "Anciano/frágil",
+          "indicacion": "Mayor riesgo de RAM/caídas",
+          "esquema": [
+            "Paracetamol 500–1000 mg EV",
+            "Fentanilo 12.5–25 µg EV en bolos pequeños",
+            "Evitar AINE salvo clara indicación"
+          ],
+          "precauciones": [
+            "Titulación lenta",
+            "Reevaluación frecuente de sedación y PA"
+          ]
+        }
+      ],
+      "notas_generales": "Los opiáceos tienen corta duración del efecto (morfina ~4 h); analgesia potente pero con riesgo de depresión respiratoria. Combinar con AINE o paracetamol para efecto ahorrador. Reevaluar EVA/NRS y constantes a los 15–30 min."
+    },
+    "ANTIALERGICOS": [
+      {
+        "nombre": "Cetirizina",
+        "presentaciones": [
+          "comp 10 mg",
+          "jarabe 1 mg/ml",
+          "gotas 10 mg/ml"
+        ],
+        "dosis": "0.2 mg/kg/dosis c/12-24 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Clorfenamina",
+        "presentaciones": [
+          "comp 4 mg",
+          "jarabe 2-2.5 mg/5 ml",
+          "amp 10 mg"
+        ],
+        "dosis": "0.2-0.4 mg/kg/día c/8-12 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Desloratadina",
+        "presentaciones": [],
+        "dosis": "1-5 años: 2.5 ml cada 24 h; 6-11 años: 5 ml cada 24 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Loratadina",
+        "presentaciones": [
+          "comp 4 mg",
+          "jarabe 5 mg/5 ml",
+          "gotas 1 mg/ml"
+        ],
+        "dosis": "0.2 mg/kg/día",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      }
+    ],
+    "ANTIBIOTICOS": [
+      {
+        "nombre": "Amoxicilina",
+        "presentaciones": [
+          "susp 250-500 mg/5 ml",
+          "comp 500 mg"
+        ],
+        "dosis": "50-80 mg/kg/día c/8 h (amoxi-clav mismo tto)",
+        "maxima": "3 g/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Cefadroxilo",
+        "presentaciones": [
+          "susp 250-500 mg/5 ml",
+          "comp 500 mg"
+        ],
+        "dosis": "30-50 mg/kg/día",
+        "maxima": "2 g/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Azitromicina",
+        "presentaciones": [
+          "susp 200 mg/5 ml",
+          "comp 500 mg"
+        ],
+        "dosis": "15 mg/kg/día",
+        "maxima": "500 mg/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Nitrofurantoina",
+        "presentaciones": [
+          "25 mg/5 ml",
+          "100 mg"
+        ],
+        "dosis": "5-7 mg/kg/día c/6 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": "Profilaxis ITU: 1-2 mg/kg/día"
+      },
+      {
+        "nombre": "Cotrimoxazol (Sulfametoxazol/Trimetoprima)",
+        "presentaciones": [
+          "inyect 800/80 mg",
+          "comp 400/40 mg"
+        ],
+        "dosis": "Adultos y >12A: 800/160 mg c/12 h. 6-12A: 400/80 mg c/12 h; 6M-5A: 200/40 mg c/12 h; 6-5M: 100/20 mg c/12 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": "Tratamiento de pielonefritis aguda"
+      },
+      {
+        "nombre": "Peni-benzatina",
+        "presentaciones": [],
+        "dosis": "<25 kg: 600,000 U; >25 kg: 1.2 M; adultos: 1.2-2.4 M c/7-21 días",
+        "maxima": "2.4 M/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Peni-G sódica",
+        "presentaciones": [],
+        "dosis": "200-500 mil U/kg/día c/6 h EV; adulto 600 mil-1.2 M/día",
+        "maxima": "24 M/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Claritromicina",
+        "presentaciones": [],
+        "dosis": "7.5-15 mg/kg/día c/12 h",
+        "maxima": "1 g/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Ciprofloxacino",
+        "presentaciones": [
+          "comp 500 mg"
+        ],
+        "dosis": "20-40 mg/kg/día c/12 h (VO), 3.2-12.5 mg/kg/día c/12 h",
+        "maxima": "1.5 g VO; 1.2 g EV",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Metronidazol",
+        "presentaciones": [
+          "comp 500 mg",
+          "EV 500 mg/100 ml"
+        ],
+        "dosis": "Amebiasis: Niños 40-50 mg/kg/día c/8-6 h; Adultos 1.5-2 g/día c/8-6 h (5-7 días). Anaerobios: Niños 7.5 mg/kg c/8 h; Adultos 500 mg c/8 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": "Dar en 2 dosis/día entre comidas; en amebiasis hepática considerar drenaje si fase supurativa"
+      }
+    ],
+    "CORTICOIDES": [
+      {
+        "nombre": "Hidrocortisona",
+        "presentaciones": [
+          "bbs 100-500 mg"
+        ],
+        "dosis": "Shock: 20 mg/kg/día; Asma: 5-10 mg/kg/dosis c/2-4-6 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Betametasona",
+        "presentaciones": [
+          "amp 4 mg/ml"
+        ],
+        "dosis": "0.2-0.5 mg/kg/día; 2-3 gotas/kg",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Prednisona",
+        "presentaciones": [
+          "comp 5-20 mg",
+          "susp 20 mg/5 ml"
+        ],
+        "dosis": "1-2 mg/kg/día",
+        "maxima": "Niños 40 mg",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Dexametasona",
+        "presentaciones": [
+          "amp 4 mg/ml",
+          "gotas 1 mg/ml"
+        ],
+        "dosis": "Laringitis: 0.6 mg/kg/dosis; 0.1-0.25 mg/kg c/6 h EV",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      }
+    ],
+    "BRONCODILATADORES": [
+      {
+        "nombre": "Salbutamol",
+        "presentaciones": [
+          "100 mcg/puff",
+          "solución nebulizar"
+        ],
+        "dosis": "INH: 2 puff c/4-6-8 h; NBZ: 0.05 ml/kg/dosis + 5 cc SF",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Bromuro de ipratropio",
+        "presentaciones": [],
+        "dosis": "INH 2 puff c/4-6-8 h; NBZ 0.05 ml/kg/dosis + 5 cc SF",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Berodual",
+        "presentaciones": [],
+        "dosis": "INH 2 puff c/4-6-8 h; NBZ 0.05 ml/kg/dosis + 5 cc SF",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": "Mayor efectividad en >1 año"
+      },
+      {
+        "nombre": "Adrenabna corriente",
+        "presentaciones": [
+          "amp 1 mg/1 ml"
+        ],
+        "dosis": "RN 0.5 cc + 3.5 cc NaCl; 1-6 m: 1 cc + 3 cc NaCl; 7 m-1A: 1.5 cc + 2.5 cc NaCl",
+        "maxima": "2 ml por NBZ",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Adrenabna racemica",
+        "presentaciones": [
+          "amp 1 mg/1 ml"
+        ],
+        "dosis": "0.05-0.1 mg/kg; <20 kg: 0.25 ml; >20 kg: 0.5 ml",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      }
+    ],
+    "GASTROPROTECTORES_Y_ANTIEMETICOS": [
+      {
+        "nombre": "Viadil (Pargeverina 5 mg / Metamizol 2 g)",
+        "presentaciones": [
+          "gotas 5 mg/ml",
+          "IM/EV"
+        ],
+        "dosis": "Mayores 12A: 20-40 gotas 3-5 v/día; 2-12A: 2 gotas/año 3-5 v/día; <2A: 1 gota/kg/día",
+        "maxima": null,
+        "contraindicaciones": [
+          "Uropatía obstructiva por HBP",
+          "Patología GI"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Buscapina",
+        "presentaciones": [
+          "gotas 10 mg/ml",
+          "amp 20 mg/ml"
+        ],
+        "dosis": "1M-4A: 300-600 µg/kg (máx 5 mg/dosis) c/6-8 h; 5-11A: 5-10 mg c/6-8 h; 12-17A: 10-20 mg c/6-8 h",
+        "maxima": "1.5 mg/kg",
+        "contraindicaciones": [
+          "Patología uretro-prostática",
+          "Estenosis GI",
+          "Íleo paralítico"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Domperidona",
+        "presentaciones": [
+          "gotas",
+          "comp 10 mg"
+        ],
+        "dosis": "1 mg/kg c/8-12 h; 1 gota/kg c/8-12 h; 0.2-0.4 ml/kg/dosis c/8 h",
+        "maxima": null,
+        "contraindicaciones": [
+          "Menores de 10A"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Ondansetrón",
+        "presentaciones": [
+          "amp 4 mg/2 ml"
+        ],
+        "dosis": "0.1-0.2 mg/kg/dosis (≥6 meses)",
+        "maxima": null,
+        "contraindicaciones": [
+          "Uso concomitante con apomorfina (hipotensión severa)"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Metoclopramida",
+        "presentaciones": [
+          "gotas 4 g/ml",
+          "comp 10 mg"
+        ],
+        "dosis": "Adultos 20-50 gotas 3 v/día; 0.25-0.5 mg/kg/día c/8 h (≥6 meses)",
+        "maxima": null,
+        "contraindicaciones": [
+          "<6 meses",
+          "Epilepsia",
+          "Medicamentos con reacciones extrapiramidales"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Omeprazol",
+        "presentaciones": [
+          "amp-cap 20-40 mg"
+        ],
+        "dosis": "0.25-0.5 mg/kg c/12-24 h; <5A: 5 mg/kg/día; 5-10A: 10 mg/kg/día",
+        "maxima": null,
+        "contraindicaciones": [
+          "Infección por VIH"
+        ],
+        "notas": null
+      }
+    ],
+    "AGUA_Y_ELECTROLITOS": [
+      {
+        "nombre": "Cloruro de sodio",
+        "presentaciones": [
+          "20-100-250-500-1000 ml"
+        ],
+        "dosis": "40-60 gotas/min (120–180 ml/h)",
+        "maxima": null,
+        "contraindicaciones": [
+          "Precaución en IR",
+          "ICC",
+          "Embarazo",
+          "Lactancia"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Ringer lactato",
+        "presentaciones": [
+          "500-1000 ml"
+        ],
+        "dosis": "Adultos: 500-3000 ml/día. Niños: 0-10 kg: 100 ml/kg/día; 10-20 kg: 1000 ml + 50 ml/kg >10; >20 kg: 1500 ml + 20 ml/kg >20",
+        "maxima": null,
+        "contraindicaciones": [
+          "Precaución en IR",
+          "ICC",
+          "Embarazo",
+          "Lactancia"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Albúmina",
+        "presentaciones": [
+          "frasco 10 g"
+        ],
+        "dosis": "Ascitis por insuf. hepática: 1 frasco por cada litro drenado",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": "Antes de drenar estudiar líquido ascítico (PMN ≥ 250/µl) para descartar PBE"
+      }
+    ],
+    "JARABES": [
+      {
+        "nombre": "Bisolvon (bromhexina)",
+        "presentaciones": [
+          "jarabe infantil 4 mg/5 ml"
+        ],
+        "dosis": "Adultos 5-10 ml c/8 h; niños 2.5 ml c/8 h; lactantes 0.5 mg/kg/día. >12A: 10 ml c/8 h; 6-12A: 5 ml c/8 h; <6A: 2.5 ml c/8 h",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Ambroxol / Muxol",
+        "presentaciones": [
+          "jarabe 15 mg/5 ml"
+        ],
+        "dosis": "Adultos 30 mg c/8 h o 60 mg c/12 h; 6-12A: 15 mg c/8-12 h; 2-5A: 2.5 ml c/8 h",
+        "maxima": null,
+        "contraindicaciones": [
+          "No menores de 2 años",
+          "Lactancia",
+          "Embarazo"
+        ],
+        "notas": null
+      }
+    ],
+    "SEDANTES": [
+      {
+        "nombre": "Diazepam",
+        "presentaciones": [
+          "comp 10 mg",
+          "amp 10 mg/2 ml"
+        ],
+        "dosis": "0.3-0.5 mg/kg/dosis EV o IM",
+        "maxima": null,
+        "contraindicaciones": [
+          "Precaución: apnea del sueño",
+          "Miastenia gravis",
+          "Afección respiratoria"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Midazolam",
+        "presentaciones": [
+          "gotas 2.5 mg/0.5 ml",
+          "amp 100 mg/100 ml",
+          "amp 5 mg/ml"
+        ],
+        "dosis": "0.2-0.5 mg/kg/dosis EV",
+        "maxima": null,
+        "contraindicaciones": [
+          "Precaución: afección respiratoria"
+        ],
+        "notas": "Gotas sube de 2.5 mg en 2.5 mg"
+      },
+      {
+        "nombre": "Haloperidol",
+        "presentaciones": [
+          "comp 1/5 mg",
+          "amp 5-50-100/1 ml",
+          "500 mg/5 ml"
+        ],
+        "dosis": "Adultos fase aguda: amp 100 mg/1 ml, 5-10 mg c/8 h IM; niños 0.5-3 mg/kg/día",
+        "maxima": "Niños 30 mg/día; Adultos 60 mg/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Fenitoína",
+        "presentaciones": [
+          "comp 100 mg",
+          "amp 250 mg/5 ml"
+        ],
+        "dosis": "Ataque: 5-7 mg/kg/dosis; Mantención: >3A 8-10 mg/kg/día; <3A 4-7 mg/kg/día",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Lorazepam",
+        "presentaciones": [
+          "comp 2 mg",
+          "amp 4 mg/2 ml"
+        ],
+        "dosis": "0.05-0.1 mg/kg/dosis (amp 4 mg/2 ml)",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Fenobarbital",
+        "presentaciones": [
+          "comp 100 mg",
+          "amp 250 mg/5 ml"
+        ],
+        "dosis": "Carga: 20 mg/kg/dosis; Mantención: 3-5 mg/kg/dosis",
+        "maxima": "40 mg/kg/día",
+        "contraindicaciones": [],
+        "notas": null
+      },
+      {
+        "nombre": "Rocuronio",
+        "presentaciones": [
+          "amp 25-50-100 mg / 2.5-5-10 ml"
+        ],
+        "dosis": "Intubación: 0.6 mg/kg; intubación en 60 s: 1 mg/kg",
+        "maxima": null,
+        "contraindicaciones": [],
+        "notas": null
+      }
+    ],
+    "ANTIVIRALES": [
+      {
+        "nombre": "Oseltamivir",
+        "presentaciones": [
+          "75 mg"
+        ],
+        "dosis": "75 mg c/12 h por 5 días. Niños/adolescentes: <15 kg/15-23/24-40/>40 kg → 30/40/60/75 mg respectivamente",
+        "maxima": null,
+        "contraindicaciones": [
+          "No dar en menores de 15 kg"
+        ],
+        "notas": null
+      },
+      {
+        "nombre": "Aciclovir",
+        "presentaciones": [
+          "comp 200/400/800 mg"
+        ],
+        "dosis": "200-400 mg c/4-6 h por 5-7 días (HZ/Varicela: 800 mg c/4 h por 7 días). Niños >2A: 20 mg/kg/día c/6 h por 5 días (máx 800 mg)",
+        "maxima": "800 mg",
+        "contraindicaciones": [
+          "Embarazo",
+          "Lactancia",
+          "<2 años"
+        ],
+        "notas": "Omitir dosis nocturna"
+      }
+    ],
+    "Tratamientos_Especificos": [
+      {
+        "id": "pancreatitis_aguda",
+        "nombre": "Pancreatitis Aguda",
+        "categoria": "Gastroenterología / Urgencias",
+        "descripcion": "Inflamación aguda del páncreas, usualmente de origen biliar o alcohólico. El manejo se basa en soporte y prevención de complicaciones.",
+        "manejo_inicial": [
+          "Hidratación vigorosa con Ringer Lactato (5-10 ml/kg/h)",
+          "Analgesia EV (opioides de elección: morfina, buprenorfina o tramadol)",
+          "Ayuno absoluto; reiniciar dieta progresiva al mejorar el dolor",
+          "Evaluar criterios de gravedad (BISAP, SIRS, Ranson)"
+        ],
+        "farmacologico": {
+          "analgesia": "Morfina 2-4 mg EV cada 4 h según dolor. Alternativas: tramadol 50-100 mg EV.",
+          "antiemetico": "Ondansetrón 4 mg EV cada 8 h si vómitos.",
+          "antibioticos": "Solo si infección confirmada (necrosis infectada): imipenem 500 mg EV cada 6 h o meropenem 1 g EV cada 8 h."
+        },
+        "combinaciones": [
+          {
+            "nombre": "Analgesia + control sintomático",
+            "esquema": [
+              "Morfina EV + Ondansetrón EV + hidratación IV continua"
+            ]
+          },
+          {
+            "nombre": "Pancreatitis necrotizante infectada",
+            "esquema": [
+              "Imipenem EV + soporte intensivo + drenaje percutáneo/cirugía según evolución"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hemorragia_digestiva_alta",
+        "nombre": "Hemorragia Digestiva Alta (HDA)",
+        "categoria": "Gastroenterología / Urgencias",
+        "descripcion": "Sangrado proximal al ligamento de Treitz. Causas frecuentes: úlcera péptica, varices esofágicas.",
+        "manejo_inicial": [
+          "Vía venosa periférica gruesa x2",
+          "Reanimación con cristaloides",
+          "Transfusión si Hb < 7 g/dL (o < 8 en cardiopatía)",
+          "Evaluar score de Glasgow-Blatchford o Rockall"
+        ],
+        "farmacologico": {
+          "inhibidor_bomba_protones": "Omeprazol 80 mg bolo EV + 8 mg/h infusión continua 72 h.",
+          "vasoconstrictor_varices": "Terlipresina 2 mg EV cada 4 h o somatostatina 250 µg bolo + infusión 250 µg/h.",
+          "profilaxis_antibiotica": "Ceftriaxona 1 g EV cada 24 h (si sospecha de varices)."
+        },
+        "combinaciones": [
+          {
+            "nombre": "Úlcera péptica sangrante",
+            "esquema": [
+              "Omeprazol EV + fluidoterapia + endoscopía terapéutica"
+            ]
+          },
+          {
+            "nombre": "Variceal sangrante",
+            "esquema": [
+              "Terlipresina + Ceftriaxona + Endoscopía con ligadura"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "acv_isquemico",
+        "nombre": "Accidente Cerebrovascular Isquémico",
+        "categoria": "Neurología / Urgencias",
+        "descripcion": "Déficit neurológico focal agudo por oclusión vascular cerebral.",
+        "manejo_inicial": [
+          "Tomografía de cerebro urgente sin contraste",
+          "Evaluar elegibilidad para trombólisis (menos de 4.5 h desde inicio)",
+          "Control de TA y glicemia"
+        ],
+        "farmacologico": {
+          "trombolitico": "Alteplasa 0.9 mg/kg (máx 90 mg): 10% bolo, resto infusión 1 h.",
+          "antiagregante": "AAS 300 mg VO después de excluir hemorragia.",
+          "anticoagulacion": "En FA, iniciar DOAC o warfarina tras 48–72 h si no hay sangrado."
+        },
+        "combinaciones": [
+          {
+            "nombre": "Trombolisis elegible",
+            "esquema": [
+              "Alteplasa + control TA + monitoreo intensivo"
+            ]
+          },
+          {
+            "nombre": "No candidato a trombolisis",
+            "esquema": [
+              "AAS 300 mg VO + control factores de riesgo + rehabilitación temprana"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ima",
+        "nombre": "Infarto Agudo de Miocardio (IAM)",
+        "categoria": "Cardiología / Urgencias",
+        "descripcion": "Necrosis miocárdica aguda por oclusión coronaria. Diagnóstico con troponinas y ECG (elevación del ST o NSTEMI).",
+        "manejo_inicial": [
+          "MONA: Morfina, Oxígeno, Nitratos, AAS",
+          "Monitorización cardíaca",
+          "Determinar tiempo a reperfusión (<90 min a angioplastia)"
+        ],
+        "farmacologico": {
+          "antiagregantes": "AAS 300 mg VO + Clopidogrel 300–600 mg VO carga.",
+          "anticoagulante": "Enoxaparina 1 mg/kg SC cada 12 h o heparina no fraccionada EV.",
+          "antiisquemico": "Nitroglicerina EV según TA; betabloqueo si no hay shock."
+        },
+        "combinaciones": [
+          {
+            "nombre": "IAM con elevación del ST",
+            "esquema": [
+              "AAS + Clopidogrel + Enoxaparina + reperfusión (angioplastia o fibrinólisis)"
+            ]
+          },
+          {
+            "nombre": "IAM sin elevación del ST",
+            "esquema": [
+              "AAS + Clopidogrel + Betabloqueador + Estatina alta dosis"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "epoc_descompensado",
+        "nombre": "EPOC descompensado",
+        "categoria": "Neumología / Urgencias",
+        "descripcion": "Exacerbación aguda del EPOC caracterizada por aumento de disnea, tos y/o esputo purulento.",
+        "manejo_inicial": [
+          "Oxigenoterapia para mantener SatO₂ 88–92%",
+          "Ventilación no invasiva si hipercapnia",
+          "Control gasométrico"
+        ],
+        "farmacologico": {
+          "broncodilatador": "Salbutamol 2.5 mg nebulizado cada 20 min x 3, luego según respuesta.",
+          "corticoide": "Metilprednisolona 40 mg EV cada 12 h (o prednisona 40 mg VO/día).",
+          "antibiotico": "Amoxicilina/Clavulánico 875/125 mg VO cada 8 h o ceftriaxona 1 g EV si grave."
+        },
+        "combinaciones": [
+          {
+            "nombre": "Exacerbación moderada",
+            "esquema": [
+              "Salbutamol nebulizado + Prednisona VO + antibiótico oral"
+            ]
+          },
+          {
+            "nombre": "Exacerbación grave",
+            "esquema": [
+              "Salbutamol + Ipratropio nebulizados + Ceftriaxona EV + metilprednisolona EV"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "apendicitis_aguda",
+        "nombre": "Apendicitis Aguda",
+        "categoria": "Cirugía / Urgencias",
+        "descripcion": "Inflamación aguda del apéndice. Manejo quirúrgico tras estabilización y antibióticos profilácticos.",
+        "manejo_inicial": [
+          "Ayuno, hidratación EV, analgesia",
+          "Antibióticos preoperatorios",
+          "Evaluación quirúrgica urgente"
+        ],
+        "farmacologico": {
+          "analgesia": "Tramadol 50–100 mg EV o morfina 2–4 mg EV según dolor.",
+          "antibiotico": "Ceftriaxona 2 g EV cada 24 h + Metronidazol 500 mg EV cada 8 h.",
+          "antiemetico": "Ondansetrón 4 mg EV según necesidad."
+        },
+        "combinaciones": [
+          {
+            "nombre": "Apendicitis no complicada",
+            "esquema": [
+              "Ceftriaxona + Metronidazol + apendicectomía"
+            ]
+          },
+          {
+            "nombre": "Apendicitis perforada o absceso",
+            "esquema": [
+              "Ceftriaxona + Metronidazol + drenaje o cirugía diferida"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

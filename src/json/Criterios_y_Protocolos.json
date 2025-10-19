@@ -1,0 +1,659 @@
+{
+  "Criterios_y_Protocolos": [
+    {
+      "id": "proto_rsi",
+      "tipo": "protocolo",
+      "targetId": "rsi_isr",
+      "nombre": "Intubación de Secuencia Rápida (RSI/ISR)",
+      "categoria": "Protocolos",
+      "color": "#0ea5e9",
+      "descripcion": "Procedimiento para asegurar la vía aérea con inducción y parálisis rápidas. Incluye pasos, dosis y calculadora por peso.",
+      "interaccion": {
+        "label": "Ver protocolo",
+        "path": "/protocolos?r=rsi_isr"
+      }
+    },
+    {
+      "id": "curb65",
+      "nombre": "CURB-65 en la NAC",
+      "categoria": "Neumonía",
+      "color": "#B0D5F0",
+      "descripcion": "Gravedad de neumonía adquirida en la comunidad.",
+      "form": {
+        "fields": [
+          { "key": "confusion", "label": "Confusión (AMTS ≤ 8/10)", "type": "boolean", "points": 1 },
+          { "key": "urea", "label": "Urea ≥ 7 mmol/L (BUN ≥ 20 mg/dL)", "type": "boolean", "points": 1 },
+          { "key": "rr30", "label": "FR ≥ 30/min", "type": "boolean", "points": 1 },
+          { "key": "bpLow", "label": "PAS < 90 o PAD ≤ 60 mmHg", "type": "boolean", "points": 1 },
+          { "key": "age65", "label": "Edad ≥ 65 años", "type": "boolean", "points": 1 }
+        ],
+        "score": "Suma de puntos (0-5).",
+        "ranges": [
+          {
+            "min": 0,
+            "max": 1,
+            "label": "Bajo riesgo (~1–2%)",
+            "recomendacion": "Manejo ambulatorio con antibiótico oral y control clínico precoz 24–48 h.",
+            "plan": {
+              "destino": "Ambulatorio",
+              "kinesiologia": "Sí, educación en higiene bronquial y espirometría incentivada si hay secreciones.",
+              "monitor": "Signos vitales en domicilio si posible, alarma por disnea/hipoxemia.",
+              "tratamiento": "ATB oral según guía local (ej. amoxi-cla o macrólido), analgesia/antitérmicos, hidratación.",
+              "oxigeno": "Objetivo SpO2 ≥ 92% (≥ 88% en EPOC).",
+              "seguimiento": "Revaluar en 24–48 h o antes si empeora."
+            }
+          },
+          {
+            "min": 2,
+            "max": 2,
+            "label": "Riesgo intermedio (~9%)",
+            "recomendacion": "Ingresar para observación corta o sala según comorbilidades y soporte social.",
+            "plan": {
+              "destino": "Observación / Sala",
+              "kinesiologia": "Sí, técnica de higiene bronquial y movilización temprana.",
+              "monitor": "SV c/4–6 h; SatO2 continua si hipoxemia.",
+              "tratamiento": "ATB IV/VO según severidad y resistencias locales; fluidoterapia si hipovolemia.",
+              "oxigeno": "Titular para SpO2 objetivo.",
+              "criterios_alta": "Estabilidad hemodinámica, SpO2 en objetivo, tolerancia oral, soporte en domicilio."
+            }
+          },
+          {
+            "min": 3,
+            "max": 5,
+            "label": "Alto riesgo (≥22%)",
+            "recomendacion": "Ingreso hospitalario; valorar UCI si inestabilidad o hipoxemia refractaria.",
+            "plan": {
+              "destino": "Sala de agudos / UTI según estabilidad",
+              "kinesiologia": "Sí; coordinación con KTR para drenaje postural/PEP; cuidado en FR alta/fatiga.",
+              "monitor": "SV continuos, gasometría, lactato si shock; balance hídrico.",
+              "tratamiento": "ATB empírico de amplio espectro según guía local; considerar corticoterapia si shock séptico; VTE profilaxis.",
+              "oxigeno": "Alto flujo/VMNI si hipoxemia o fatiga; intubación si fracaso.",
+              "criterios_uti": "Shock séptico, VMNI/VM, PaO2/FiO2 bajo, acidosis, comorbilidad descompensada."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "light",
+      "nombre": "Criterios de Light",
+      "categoria": "Derrame pleural",
+      "color": "#A8E24A",
+      "descripcion": "Diferencia exudado vs trasudado.",
+      "form": {
+        "fields": [
+          { "key": "protPleural", "label": "Proteínas en pleura (g/dL)", "type": "number" },
+          { "key": "protSuero", "label": "Proteínas en suero (g/dL)", "type": "number" },
+          { "key": "ldhPleural", "label": "LDH pleural (U/L)", "type": "number" },
+          { "key": "ldhSuero", "label": "LDH sérica (U/L)", "type": "number" },
+          { "key": "ldhULN", "label": "Límite superior normal LDH sérica (U/L)", "type": "number" }
+        ],
+        "score": "Exudado si: (protPleural/protSuero > 0.5) OR (ldhPleural/ldhSuero > 0.6) OR (ldhPleural > 2/3 * ldhULN).",
+        "decision": [
+          {
+            "when": "REGRA TRUE",
+            "label": "Exudado",
+            "recomendacion": "Estudio etiológico y manejo dirigido; considerar drenaje si complicado.",
+            "plan": {
+              "destino": "Sala/UTI según estabilidad respiratoria",
+              "kinesiologia": "Sí, si hay atelectasias o retención; evitar si hay drenaje torácico no sellado.",
+              "estudio": "Citología, cultivo, ADA, pH/Glucosa; imagen (eco/TC) si tabicado.",
+              "intervencion": "Drenaje pleural si empiema/pH < 7.2/Glucosa < 60 mg/dL; fibrinolíticos o VATS si tabicado.",
+              "antibiotico": "Si parapneumónico/empiema según guía local."
+            }
+          },
+          {
+            "when": "REGRA FALSE",
+            "label": "Trasudado",
+            "recomendacion": "Optimizar causa subyacente (IC/cirrosis/nefrosis).",
+            "plan": {
+              "destino": "Ambulatorio o sala según disnea/recurrencia",
+              "kinesiologia": "Opcional; educación en ejercicios de expansión.",
+              "tratamiento": "Diuréticos y restricción sodio si IC; paracentesis/albumina si cirrosis; considerar toracocentesis evacuadora si disnea severa."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sadpersons",
+      "nombre": "Escala SAD PERSONS",
+      "categoria": "Salud mental",
+      "color": "#FF2D2D",
+      "descripcion": "Riesgo de suicidio (10 ítems).",
+      "form": {
+        "fields": [
+          { "key": "sex", "label": "Sexo masculino", "type": "boolean", "points": 1 },
+          { "key": "age", "label": "Edad <19 o >45 años", "type": "boolean", "points": 1 },
+          { "key": "depression", "label": "Depresión", "type": "boolean", "points": 1 },
+          { "key": "previous", "label": "Intento previo", "type": "boolean", "points": 1 },
+          { "key": "ethanol", "label": "Alcohol/drogas", "type": "boolean", "points": 1 },
+          { "key": "rational", "label": "Pérdida racional (psicosis)", "type": "boolean", "points": 1 },
+          { "key": "social", "label": "Apoyo social escaso", "type": "boolean", "points": 1 },
+          { "key": "organized", "label": "Plan organizado", "type": "boolean", "points": 1 },
+          { "key": "noSpouse", "label": "No pareja (soltero/viudo/div.)", "type": "boolean", "points": 1 },
+          { "key": "sickness", "label": "Enfermedad grave", "type": "boolean", "points": 1 }
+        ],
+        "score": "Suma (0-10).",
+        "ranges": [
+          {
+            "min": 0,
+            "max": 4,
+            "label": "Bajo",
+            "recomendacion": "Alta con plan de seguridad y seguimiento estrecho.",
+            "plan": {
+              "destino": "Ambulatorio",
+              "seguridad": "Retirar medios letales; contacto de apoyo 24/7; señales de alarma.",
+              "derivacion": "Salud mental ambulatoria en ≤ 72 h.",
+              "kinesiologia": "No aplica."
+            }
+          },
+          {
+            "min": 5,
+            "max": 6,
+            "label": "Moderado",
+            "recomendacion": "Observación/ingreso breve y evaluación por psiquiatría.",
+            "plan": {
+              "destino": "Observación / Sala corta estadía",
+              "monitor": "Contención ambiental; reevaluación periódica del riesgo.",
+              "intervencion": "Considerar inicio de tto según diagnóstico; intervención en crisis."
+            }
+          },
+          {
+            "min": 7,
+            "max": 10,
+            "label": "Alto",
+            "recomendacion": "Hospitalización con medidas de seguridad.",
+            "plan": {
+              "destino": "Sala cerrada / UTI si intoxicación o inestabilidad médica",
+              "seguridad": "Supervisión continua; retirar objetos peligrosos.",
+              "intervencion": "Manejo de intoxicaciones; contención; plan terapéutico intensivo."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bisap",
+      "nombre": "BISAP (Pancreatitis aguda)",
+      "categoria": "Gastroenterología",
+      "color": "#F7B267",
+      "descripcion": "Predicción de mortalidad (0-5).",
+      "form": {
+        "fields": [
+          { "key": "bun25", "label": "BUN > 25 mg/dL", "type": "boolean", "points": 1 },
+          { "key": "gcs", "label": "Estado mental alterado (GCS < 15)", "type": "boolean", "points": 1 },
+          { "key": "sirs2", "label": "SIRS ≥ 2", "type": "boolean", "points": 1 },
+          { "key": "age60", "label": "Edad > 60 años", "type": "boolean", "points": 1 },
+          { "key": "pleural", "label": "Derrame pleural", "type": "boolean", "points": 1 }
+        ],
+        "score": "Suma (0-5).",
+        "ranges": [
+          {
+            "min": 0,
+            "max": 1,
+            "label": "Bajo riesgo",
+            "recomendacion": "Manejo estándar en sala o ambulatorio selecto.",
+            "plan": {
+              "destino": "Sala / Ambulatorio (si tolera VO y dolor controlado)",
+              "monitor": "Balance hídrico; dolor; signos de sepsis.",
+              "tratamiento": "Hidratación IV temprana, analgesia, ayuno corto/realimentación precoz, corrección de causas.",
+              "kinesiologia": "Deambulación precoz."
+            }
+          },
+          {
+            "min": 2,
+            "max": 3,
+            "label": "Intermedio",
+            "recomendacion": "Ingreso y monitorización estrecha.",
+            "plan": {
+              "destino": "Sala de agudos",
+              "monitor": "Diuresis, BUN/hematocrito, signos de fallo orgánico.",
+              "tratamiento": "Hidratación guiada por objetivos; soporte nutricional si prolongado."
+            }
+          },
+          {
+            "min": 4,
+            "max": 5,
+            "label": "Alto riesgo",
+            "recomendacion": "Considerar UTI por riesgo de fallo orgánico.",
+            "plan": {
+              "destino": "UTI",
+              "monitor": "Soporte hemodinámico/respiratorio; escalas de fallo orgánico.",
+              "tratamiento": "Nutrición enteral precoz si posible; antibióticos solo si infección confirmada."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "psi",
+      "nombre": "PSI (Pneumonia Severity Index) - simplificado",
+      "categoria": "Neumonía",
+      "color": "#9AD3DE",
+      "descripcion": "Clasificación I–V (resumida para triage).",
+      "form": {
+        "fields": [
+          { "key": "age", "label": "Edad (años)", "type": "number" },
+          { "key": "male", "label": "Sexo masculino", "type": "boolean", "points": 0 },
+          { "key": "nursingHome", "label": "Vive en residencia", "type": "boolean", "points": 10 },
+          { "key": "comorbCHF", "label": "Insuficiencia cardiaca", "type": "boolean", "points": 10 },
+          { "key": "comorbLiver", "label": "Hepatopatía", "type": "boolean", "points": 20 },
+          { "key": "rr30", "label": "FR ≥ 30/min", "type": "boolean", "points": 20 },
+          { "key": "sbp90", "label": "PAS < 90 mmHg", "type": "boolean", "points": 20 },
+          { "key": "temp35", "label": "Tª < 35 °C o ≥ 40 °C", "type": "boolean", "points": 15 },
+          { "key": "confusion", "label": "Confusión", "type": "boolean", "points": 20 },
+          { "key": "bun30", "label": "BUN ≥ 30 mg/dL", "type": "boolean", "points": 20 },
+          { "key": "o2low", "label": "SatO2 < 90% o PaO2 < 60 mmHg", "type": "boolean", "points": 10 }
+        ],
+        "score": "Edad (hombre = edad, mujer = edad - 10) + suma de puntos.",
+        "ranges": [
+          {
+            "min": 0,
+            "max": 70,
+            "label": "Clase I–II (bajo)",
+            "recomendacion": "Manejo ambulatorio con plan y control precoz.",
+            "plan": { "destino": "Ambulatorio", "kinesiologia": "Sí (educación respiratoria)", "oxigeno": "Objetivo SpO2 ≥ 92%", "seguimiento": "24–48 h" }
+          },
+          {
+            "min": 71,
+            "max": 90,
+            "label": "Clase III (intermedio)",
+            "recomendacion": "Observación/ingreso breve según soporte social y comorbilidades.",
+            "plan": { "destino": "Observación / Sala corta", "monitor": "SV y SpO2", "tratamiento": "ATB IV/VO según guía", "kinesiologia": "Sí" }
+          },
+          {
+            "min": 91,
+            "max": 130,
+            "label": "Clase IV (alto)",
+            "recomendacion": "Ingreso hospitalario.",
+            "plan": { "destino": "Sala de hospitalización", "monitor": "SV continuos si hipoxemia", "oxigeno": "Alto flujo/VMNI si precisa", "kinesiologia": "Sí (según tolerancia)" }
+          },
+          {
+            "min": 131,
+            "max": 999,
+            "label": "Clase V (muy alto)",
+            "recomendacion": "Alto riesgo; considerar UTI.",
+            "plan": { "destino": "UTI", "criterios_uti": "Inestabilidad hemodinámica o ventilatoria", "tratamiento": "ATB amplio; bundle sepsis si aplica", "kinesiologia": "Con precaución" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "scap",
+      "nombre": "SCAP Score",
+      "categoria": "Neumonía",
+      "color": "#84C1FF",
+      "descripcion": "Gravedad de NAC (mayores/menores).",
+      "form": {
+        "fields": [
+          { "key": "pafO2_250", "label": "PaO2/FiO2 < 250", "type": "boolean", "points": 5 },
+          { "key": "multilobar", "label": "Afectación multilobar", "type": "boolean", "points": 5 },
+          { "key": "confusion", "label": "Confusión", "type": "boolean", "points": 5 },
+          { "key": "urea30", "label": "Urea ≥ 30 mg/dL", "type": "boolean", "points": 11 },
+          { "key": "sbp90", "label": "PAS < 90 mmHg", "type": "boolean", "points": 15 },
+          { "key": "pH735", "label": "pH < 7.35", "type": "boolean", "points": 13 },
+          { "key": "rr30", "label": "FR ≥ 30/min", "type": "boolean", "points": 6 },
+          { "key": "age80", "label": "Edad ≥ 80 años", "type": "boolean", "points": 9 }
+        ],
+        "score": "Suma ponderada.",
+        "ranges": [
+          { "min": 0, "max": 9, "label": "Bajo", "recomendacion": "Ambulatorio u observación con ATB y plan de control.", "plan": { "destino": "Ambulatorio/Observación", "kinesiologia": "Sí", "seguimiento": "24–48 h" } },
+          { "min": 10, "max": 19, "label": "Intermedio", "recomendacion": "Ingreso en sala, monitorización y oxigenoterapia según necesidad.", "plan": { "destino": "Sala", "monitor": "SV/SpO2", "kinesiologia": "Sí" } },
+          { "min": 20, "max": 999, "label": "Alto", "recomendacion": "Valorar UTI por alto riesgo de falla respiratoria.", "plan": { "destino": "Sala de agudos / UTI", "oxigeno": "HFNC/VMNI si precisa", "kinesiologia": "Con precaución" } }
+        ]
+      }
+    },
+    {
+      "id": "cpss",
+      "nombre": "CPSS (Cincinnati Stroke Scale)",
+      "categoria": "Neurología",
+      "color": "#B4E197",
+      "descripcion": "Detección prehospitalaria de ACV.",
+      "form": {
+        "fields": [
+          { "key": "facial", "label": "Asimetría facial", "type": "boolean", "points": 1 },
+          { "key": "arm", "label": "Caída de brazo", "type": "boolean", "points": 1 },
+          { "key": "speech", "label": "Lenguaje anormal", "type": "boolean", "points": 1 }
+        ],
+        "score": "Suma (0-3).",
+        "ranges": [
+          { "min": 0, "max": 0, "label": "Baja probabilidad", "recomendacion": "Valorar otras causas; si dudas y tiempo de inicio < 4.5 h, derivar para TC.", "plan": { "destino": "Ambulatorio/Derivación no urgente" } },
+          { "min": 1, "max": 3, "label": "Alta probabilidad", "recomendacion": "Activar código ACV y traslado a centro con TC/trombólisis.", "plan": { "destino": "Urgencias / Unidad ACV", "monitor": "SV, glucemia, NIHSS", "tratamiento": "Ventana terapéutica trombólisis/trombectomía" } }
+        ]
+      }
+    },
+    {
+      "id": "gcs",
+      "nombre": "Glasgow Coma Scale",
+      "categoria": "Neurología",
+      "color": "#D6C3FF",
+      "descripcion": "Nivel de conciencia.",
+      "form": {
+        "fields": [
+          { "key": "eye", "label": "Apertura ocular (1-4)", "type": "number" },
+          { "key": "verbal", "label": "Respuesta verbal (1-5)", "type": "number" },
+          { "key": "motor", "label": "Respuesta motora (1-6)", "type": "number" }
+        ],
+        "score": "eye + verbal + motor (3-15).",
+        "ranges": [
+          { "min": 13, "max": 15, "label": "Leve", "recomendacion": "Observación y reevaluación neurológica.", "plan": { "destino": "Ambulatorio/Observación", "imagen": "TC si trauma/anticoagulación/síntomas de alarma" } },
+          { "min": 9, "max": 12, "label": "Moderado", "recomendacion": "Ingreso; monitorización y neuroimagen.", "plan": { "destino": "Sala/Unidad de agudos", "monitor": "SV/neurológico seriado", "imagen": "TC urgente" } },
+          { "min": 3, "max": 8, "label": "Grave", "recomendacion": "Asegurar vía aérea y UTI.", "plan": { "destino": "UTI", "via_aerea": "Intubar si GCS ≤ 8", "monitor": "PIC si TCE grave" } }
+        ]
+      }
+    },
+    {
+      "id": "gbs",
+      "nombre": "Glasgow-Blatchford Score",
+      "categoria": "Digestivo (HDA)",
+      "color": "#FCE38A",
+      "descripcion": "Riesgo en hemorragia digestiva alta.",
+      "form": {
+        "fields": [
+          { "key": "bun", "label": "BUN (mg/dL)", "type": "number" },
+          { "key": "hb", "label": "Hemoglobina (g/dL)", "type": "number" },
+          { "key": "sbp", "label": "PAS (mmHg)", "type": "number" },
+          { "key": "hr", "label": "FC (lpm)", "type": "number" },
+          { "key": "melena", "label": "Melena", "type": "boolean" },
+          { "key": "syncope", "label": "Síncope", "type": "boolean" },
+          { "key": "hepatic", "label": "Enfermedad hepática", "type": "boolean" },
+          { "key": "cardiac", "label": "Insuficiencia cardiaca", "type": "boolean" }
+        ],
+        "score": "Puntaje ponderado (implementar mapeo).",
+        "ranges": [
+          { "min": 0, "max": 0, "label": "Muy bajo", "recomendacion": "Alta precoz con plan; PPI y endoscopia ambulatoria.", "plan": { "destino": "Ambulatorio", "tratamiento": "IBP", "seguimiento": "Endoscopia programada" } },
+          { "min": 1, "max": 999, "label": "Riesgo", "recomendacion": "Ingreso para reanimación y endoscopia temprana.", "plan": { "destino": "Sala/UTI según inestabilidad", "monitor": "SV, Hb seriada", "tratamiento": "Fluidos, transfusión según umbral, IBP IV", "procedimiento": "Endoscopia en 12–24 h (urgente si inestable)" } }
+        ]
+      }
+    },
+    {
+      "id": "spesi",
+      "nombre": "sPESI",
+      "categoria": "Tromboembolismo pulmonar",
+      "color": "#90E0EF",
+      "descripcion": "Riesgo en TEP (0-6).",
+      "form": {
+        "fields": [
+          { "key": "age80", "label": "Edad > 80 años", "type": "boolean", "points": 1 },
+          { "key": "cancer", "label": "Cáncer", "type": "boolean", "points": 1 },
+          { "key": "chf", "label": "Insuficiencia cardiaca crónica", "type": "boolean", "points": 1 },
+          { "key": "pulmonary", "label": "Enfermedad pulmonar crónica", "type": "boolean", "points": 1 },
+          { "key": "hr110", "label": "FC ≥ 110 lpm", "type": "boolean", "points": 1 },
+          { "key": "sbp100", "label": "PAS < 100 mmHg", "type": "boolean", "points": 1 },
+          { "key": "o2_90", "label": "SatO2 < 90%", "type": "boolean", "points": 1 }
+        ],
+        "score": "Suma (0-6).",
+        "ranges": [
+          { "min": 0, "max": 0, "label": "Bajo riesgo", "recomendacion": "Anticoagulación ambulatoria con seguimiento estrecho.", "plan": { "destino": "Ambulatorio (si hemodinámicamente estable)", "tratamiento": "ACOD/Heparina LMWH", "seguimiento": "Control 24–72 h y educación alarma" } },
+          { "min": 1, "max": 6, "label": "No bajo riesgo", "recomendacion": "Ingreso para monitorización y estratificación (ecocardio, biomarcadores).", "plan": { "destino": "Sala/UTI según hemodinamia", "monitor": "SV continuos, SaO2", "tratamiento": "Anticoagulación; considerar trombólisis si inestabilidad", "kinesiologia": "Deambulación guiada cuando sea seguro" } }
+        ]
+      }
+    },
+    {
+      "id": "apgar",
+      "nombre": "APGAR Neonatal",
+      "categoria": "Neonatología",
+      "color": "#FFBCD1",
+      "descripcion": "A los 1 y 5 minutos.",
+      "form": {
+        "fields": [
+          { "key": "apariencia", "label": "Apariencia (0-2)", "type": "number" },
+          { "key": "pulso", "label": "Pulso (0-2)", "type": "number" },
+          { "key": "gesto", "label": "Gesto (0-2)", "type": "number" },
+          { "key": "actividad", "label": "Actividad (0-2)", "type": "number" },
+          { "key": "respiracion", "label": "Respiración (0-2)", "type": "number" }
+        ],
+        "score": "Suma (0-10).",
+        "ranges": [
+          { "min": 7, "max": 10, "label": "Normal", "recomendacion": "Cuidados rutinarios del RN.", "plan": { "destino": "Alojamiento conjunto", "monitor": "Controles habituales" } },
+          { "min": 4, "max": 6, "label": "Moderado", "recomendacion": "Soporte y reevaluación; considerar CPAP si dificultad respiratoria.", "plan": { "destino": "Unidad intermedia", "tratamiento": "Termorregulación, manejo respiratorio suave" } },
+          { "min": 0, "max": 3, "label": "Bajo", "recomendacion": "Reanimación neonatal inmediata.", "plan": { "destino": "UTI neonatal", "tratamiento": "Vía aérea, ventilación, fármacos según algoritmo" } }
+        ]
+      }
+    },
+    {
+      "id": "tal",
+      "nombre": "Score TAL (Bronquiolitis)",
+      "categoria": "Pediatría",
+      "color": "#EEC4A5",
+      "descripcion": "Gravedad de bronquiolitis.",
+      "form": {
+        "fields": [
+          { "key": "satO2", "label": "Saturación O2 (%)", "type": "number" },
+          { "key": "tiraje", "label": "Tiraje (0-2)", "type": "number" },
+          { "key": "sibilancias", "label": "Sibilancias (0-2)", "type": "number" },
+          { "key": "alimentacion", "label": "Alimentación (0-2)", "type": "number" }
+        ],
+        "score": "Suma (0-8).",
+        "ranges": [
+          { "min": 0, "max": 3, "label": "Leve", "recomendacion": "Manejo ambulatorio y educación a cuidadores.", "plan": { "destino": "Ambulatorio", "kinesiologia": "Lavados nasales, aspiración suave", "oxigeno": "No suele requerir" } },
+          { "min": 4, "max": 6, "label": "Moderado", "recomendacion": "Observación/ingreso; O2 y NBZ según respuesta.", "plan": { "destino": "Sala", "monitor": "SpO2, alimentación/hidratación", "kinesiologia": "Técnicas nasales; posicionamiento" } },
+          { "min": 7, "max": 8, "label": "Grave", "recomendacion": "Ingreso; soporte respiratorio intensivo.", "plan": { "destino": "UTI pediátrica", "oxigeno": "Alto flujo/VMNI", "kinesiologia": "Con coordinación estrecha" } }
+        ]
+      }
+    },
+    {
+      "id": "hta_crisis",
+      "nombre": "Crisis hipertensiva (urgencia vs. emergencia)",
+      "categoria": "Cardiovascular",
+      "color": "#FF8A65",
+      "descripcion": "Diferencia urgencia hipertensiva (sin daño agudo) de emergencia hipertensiva (con daño agudo a órgano diana).",
+      "form": {
+        "fields": [
+          { "key": "pas", "label": "PAS (mmHg)", "type": "number" },
+          { "key": "pad", "label": "PAD (mmHg)", "type": "number" },
+          { "key": "neurologico", "label": "Déficit neurológico agudo/encefalopatía/ACV", "type": "boolean" },
+          { "key": "dolorToracico", "label": "Dolor torácico isquémico/SCACEST", "type": "boolean" },
+          { "key": "edemaPulmon", "label": "Edema agudo de pulmón/insuf. cardiaca aguda", "type": "boolean" },
+          { "key": "diseccion", "label": "Sospecha de disección aórtica", "type": "boolean" },
+          { "key": "renalAguda", "label": "Insuficiencia renal aguda", "type": "boolean" },
+          { "key": "eclampsia", "label": "Embarazo con preeclampsia/eclampsia/HELLP", "type": "boolean" },
+          { "key": "retinopatia", "label": "Retinopatía hipertensiva III–IV", "type": "boolean" }
+        ],
+        "score": "Emergencia si hay daño agudo de órgano diana, aunque PAS/PAD ≥180/120 orienta a crisis.",
+        "decision": [
+          {
+            "when": "neurologico || dolorToracico || edemaPulmon || diseccion || renalAguda || eclampsia || retinopatia",
+            "label": "EMERGENCIA hipertensiva",
+            "recomendacion": "Descenso controlado de la PA con fármacos IV y monitorización continua; definir causa.",
+            "plan": {
+              "destino": "UTI/Unidad coronaria o sala de agudos según disponibilidad",
+              "criterios_uti": "Disfunción orgánica aguda, necesidad de perfusión IV, inestabilidad hemodinámica/respiratoria",
+              "monitor": "PA continua, ECG, diuresis, analítica (función renal, troponinas), TC/eco según sospecha",
+              "tratamiento": "IV según escenario: labetalol/esmolol (neuro/DAo), nitroglicerina (EAP/ISC), nitroprusiato (si disponible, evitar en isquemia cerebral)",
+              "objetivo": "Reducir PAS ~10–20% en la 1.ª hora; luego a 160/100-110 en 2–6 h (excepto disección/eclampsia con objetivos más rápidos)",
+              "kinesiologia": "No iniciar ejercicio; manejo respiratorio en EAP con posicionamiento/oxigenoterapia"
+            }
+          },
+          {
+            "when": "!(neurologico || dolorToracico || edemaPulmon || diseccion || renalAguda || eclampsia || retinopatia) && (pas >= 180 || pad >= 120)",
+            "label": "URGENCIA hipertensiva",
+            "recomendacion": "Ajuste de tratamiento VO y observación corta; descenso gradual en 24–48 h.",
+            "plan": {
+              "destino": "Observación / Sala corta; alta si estable y adherencia garantizada",
+              "monitor": "PA seriada, reevaluación síntomas",
+              "tratamiento": "VO: captopril, amlodipino, labetalol o combinación según perfil; educación y adherencia",
+              "kinesiologia": "Educación en respiración diafragmática y relajación; no ejercicio vigoroso inicial",
+              "seguimiento": "Control en 24–72 h en atención ambulatoria"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sgarbossa_smith",
+      "nombre": "Criterios de Sgarbossa (mod. Smith) en BCRI",
+      "categoria": "Cardiovascular",
+      "color": "#E57373",
+      "descripcion": "Diagnóstico de IAM con bloqueo completo de rama izquierda (BCRI).",
+      "form": {
+        "fields": [
+          { "key": "bcri", "label": "ECG con BCRI", "type": "boolean" },
+          { "key": "stConcordanteElev", "label": "Elevación ST concordante ≥ 1 mm en derivación con QRS positivo", "type": "boolean" },
+          { "key": "stConcordanteDepV1V3", "label": "Descenso ST concordante ≥ 1 mm en V1–V3", "type": "boolean" },
+          { "key": "ratioDiscordante", "label": "Relación ST/S (discordante) ≤ −0.25 (ingrese valor, ej. -0.3)", "type": "number" },
+          { "key": "sintomasIsquemia", "label": "Síntomas típicos de isquemia (dolor opresivo, vegetat.)", "type": "boolean" }
+        ],
+        "score": "IAM probable si cualquiera: (1) ST concordante elevado ≥1 mm; (2) ST concordante descendido ≥1 mm en V1–V3; (3) ST discordante excesivo con ST/S ≤ −0.25.",
+        "decision": [
+          {
+            "when": "bcri && (stConcordanteElev || stConcordanteDepV1V3 || (ratioDiscordante <= -0.25))",
+            "label": "IAM con BCRI probable",
+            "recomendacion": "Activar vía de reperfusión si clínica compatible.",
+            "plan": {
+              "destino": "Unidad coronaria/UTI",
+              "monitor": "ECG seriado, troponinas, hemodinamia",
+              "tratamiento": "Reperfusión: angioplastia primaria preferente; valorar trombólisis si no hay disponibilidad y no hay contraindicaciones",
+              "kinesiologia": "No ejercicio; reposo absoluto hasta estabilización"
+            }
+          },
+          {
+            "when": "bcri && !(stConcordanteElev || stConcordanteDepV1V3 || (ratioDiscordante <= -0.25))",
+            "label": "Indeterminado con BCRI",
+            "recomendacion": "Correlacionar con clínica/biomarcadores e imagen.",
+            "plan": {
+              "destino": "Sala de observación / Unidad coronaria según síntomas",
+              "monitor": "ECG y troponinas seriadas",
+              "tratamiento": "Antiisquémicos según protocolo si dolor; estrategia invasiva según riesgo"
+            }
+          },
+          {
+            "when": "!bcri",
+            "label": "No aplicable (sin BCRI)",
+            "recomendacion": "Use criterios habituales de IAM en ECG sin BCRI.",
+            "plan": { "destino": "Según protocolo de dolor torácico", "kinesiologia": "N/A" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rehab_post_iam",
+      "nombre": "Rehabilitación cardíaca post-IAM",
+      "categoria": "Cardiovascular",
+      "color": "#64B5F6",
+      "descripcion": "Estratificación funcional y derivación a rehabilitación cardíaca (fases I–III).",
+      "form": {
+        "fields": [
+          {
+            "key": "tipo",
+            "label": "Tipo de IAM (STEMI/NSTEMI)",
+            "type": "select",
+            "options": [
+              { "value": "STEMI", "label": "STEMI" },
+              { "value": "NSTEMI", "label": "NSTEMI" }
+            ]
+          },
+          { "key": "fevi", "label": "FEVI (%)", "type": "number" },
+          { "key": "killip", "label": "Clase Killip (I–IV)", "type": "number" },
+          { "key": "arritmias", "label": "Arritmias significativas/TV/FA no controlada", "type": "boolean" },
+          { "key": "isquemiaResidual", "label": "Isquemia residual en prueba/ECG/enzimas", "type": "boolean" },
+          {
+            "key": "revascularizado",
+            "label": "Revascularización completa (SÍ/NO)",
+            "type": "select",
+            "options": [
+              { "value": "SI", "label": "Sí" },
+              { "value": "NO", "label": "No" }
+            ]
+          }
+        ],
+        "score": "Riesgo funcional estimado: FEVI y complicaciones.",
+        "ranges": [
+          {
+            "min": 0,
+            "max": 0,
+            "label": "Bajo riesgo funcional (orientativo)",
+            "recomendacion": "Rehabilitación fase II ambulatoria precoz.",
+            "plan": {
+              "criterios": "FEVI ≥ 50%, Killip I, sin arritmias ni isquemia residual, revascularización completa",
+              "destino": "Programa ambulatorio fase II (3–5 sesiones/sem, 8–12 semanas)",
+              "componentes": "Entrenamiento aeróbico progresivo, fuerza moderada, educación, control de factores de riesgo, apoyo psicosocial",
+              "kinesiologia": "Sí, progresión supervisada; test de marcha/ergometría para prescripción",
+              "retornoLaboral": "2–4 semanas (trabajo liviano) si clínicamente estable"
+            }
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "label": "Riesgo intermedio",
+            "recomendacion": "Rehabilitación con mayor supervisión y evaluación funcional.",
+            "plan": {
+              "criterios": "FEVI 35–49% o Killip II, sin inestabilidad",
+              "destino": "Fase II con monitoreo telemétrico inicial",
+              "componentes": "Aeróbico intervalado de baja-moderada intensidad, fuerza baja, educación intensiva",
+              "kinesiologia": "Sí; progresión lenta con objetivos semanales",
+              "derivaciones": "Nutrición, psicología, trabajo social según necesidades"
+            }
+          },
+          {
+            "min": 2,
+            "max": 2,
+            "label": "Alto riesgo",
+            "recomendacion": "Iniciar fase I intrahospitalaria y transición a fase II con alta supervisión; valorar UTI si inestable.",
+            "plan": {
+              "criterios": "FEVI < 35%, Killip III–IV, arritmias significativas, isquemia residual o no revascularizado",
+              "destino": "UTI/Unidad coronaria (fase I); luego centro con telemetría para fase II",
+              "componentes": "Movilización muy precoz, educación, entrenamiento respiratorio; luego aeróbico muy suave supervisado",
+              "kinesiologia": "Sí, con metas de sedestación-deambulación progresiva",
+              "alertas": "Suspender ejercicio ante dolor, disnea desproporcionada, hipotensión, arritmias"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cha2ds2vasc",
+      "nombre": "CHA₂DS₂-VASc",
+      "categoria": "Cardiología",
+      "color": "#DC143C",
+      "descripcion": "Evalúa el riesgo anual de accidente cerebrovascular (ACV) en pacientes con fibrilación auricular no valvular, para determinar la necesidad de anticoagulación oral.",
+      "form": {
+        "fields": [
+          { "key": "chf", "label": "Insuficiencia cardíaca congestiva / disfunción ventricular izquierda", "type": "boolean", "points": 1 },
+          { "key": "htn", "label": "Hipertensión arterial (controlada o no)", "type": "boolean", "points": 1 },
+          { "key": "age75", "label": "Edad ≥ 75 años", "type": "boolean", "points": 2 },
+          { "key": "diabetes", "label": "Diabetes mellitus", "type": "boolean", "points": 1 },
+          { "key": "stroke", "label": "ACV / AIT / tromboembolismo previo", "type": "boolean", "points": 2 },
+          { "key": "vascular", "label": "Enfermedad vascular (IAM, arteriopatía periférica, placa aórtica)", "type": "boolean", "points": 1 },
+          { "key": "age6574", "label": "Edad 65–74 años", "type": "boolean", "points": 1 },
+          { "key": "female", "label": "Sexo femenino", "type": "boolean", "points": 1 }
+        ],
+        "score": "Suma total (0–9).",
+        "ranges": [
+          {
+            "min": 0,
+            "max": 0,
+            "label": "Bajo riesgo (0 en hombres / 1 en mujeres)",
+            "recomendacion": "No requiere anticoagulación oral. Puede considerarse antiagregación si hay otros factores de riesgo clínicos.",
+            "plan": {
+              "conducta": "Observación y control de factores modificables (HTA, DM, etc.)",
+              "seguimiento": "Reevaluar anualmente el score si la FA persiste o cambian las condiciones clínicas."
+            }
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "label": "Riesgo intermedio (~1–2%)",
+            "recomendacion": "Considerar anticoagulación individualizada según riesgo de sangrado y preferencia del paciente.",
+            "plan": {
+              "farmacos": "DOACs (apixabán, rivaroxabán, dabigatrán) o warfarina (INR 2–3).",
+              "evaluar": "Escala HAS-BLED para riesgo hemorrágico antes de anticoagular."
+            }
+          },
+          {
+            "min": 2,
+            "max": 9,
+            "label": "Alto riesgo (≥2 en hombres / ≥3 en mujeres)",
+            "recomendacion": "Indicación clara de anticoagulación oral crónica para prevención de ACV.",
+            "plan": {
+              "farmacos": "Anticoagulantes orales directos (DOACs) de elección. Warfarina si contraindicación a DOAC o válvula mecánica.",
+              "objetivo": "INR 2–3 si warfarina; mantener adherencia y controles regulares.",
+              "seguimiento": "Reevaluar anualmente el riesgo tromboembólico y hemorrágico."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

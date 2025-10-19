@@ -1,0 +1,8 @@
+/* Evita que el canvas “salte” por subpixel */
+canvas { display: block; }
+
+/* Ajuste de paddings en móviles */
+@media (max-width: 576px) {
+  .card-header .input-group-text { display: none; }
+  .card-header select.form-select { font-size: 0.95rem; }
+}

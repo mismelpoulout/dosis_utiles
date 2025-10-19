@@ -1,50 +1,79 @@
-.card-mode {
-  color: #fff;
-  border-radius: 6px;
-  padding: 1em;
-  margin: 1em;
-  text-shadow: 0 0 3px #000;
-  background-size: cover;
-  background: linear-gradient(0, #0f1a56, #2196f3);
-  background-size: cover;
-  transition: 0.2s;
+/* ====== Card unificada (mismo tamaño) ====== */
+.home-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  min-height: 290px;             /* alto mínimo consistente */
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.card-mode:hover {
+
+.home-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
   cursor: pointer;
-  transform: scale(1.06);
-}
-.sty{
-  text-decoration: none;
-}
-.comment{
-  padding-left:0.5em ;
-  padding-right:0.5em;
 }
 
-.card-mode > h3 {
-  font-size: 1.6em;
-  padding-bottom: 0.2em;
+/* Imagen superior con tamaño fijo (todas iguales) */
+.home-card__media {
+  width: 100%;
+  aspect-ratio: 16 / 10;         /* 🔸 garantiza la misma altura relativa */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.cards-mode-container {
-  display: grid;
-  justify-content: center;
-  grid-gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+/* Texto debajo */
+.home-card__body {
+  padding: 12px 14px 16px;
+  text-align: center;
 }
 
+.home-card__title {
+  margin: 4px 0 6px;
+  font-size: 1.05rem;            /* tamaño medio */
+  font-weight: 800;
+  color: #111;
+}
+
+.home-card__desc {
+  margin: 0;
+  font-size: .95rem;             /* tamaño medio */
+  font-weight: 500;
+  color: #333;
+}
+
+/* ====== Fondos de imagen ====== */
 .mode-study {
-  background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.7)),
+  background-image:
+    linear-gradient(rgba(255,255,255,.0), rgba(255,255,255,.0)),
     url("./img/drogs.jpg");
 }
 
 .mode-play {
-  background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.7)),
+  background-image:
+    linear-gradient(rgba(255,255,255,.0), rgba(255,255,255,.0)),
     url("./img/proto.jpg");
 }
 
 .mode-test {
-  background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.7)),
+  background-image:
+    linear-gradient(rgba(255,255,255,.0), rgba(255,255,255,.0)),
     url("./img/guideline.png");
 }
 
+.mode-sim {
+  background-image:
+    linear-gradient(rgba(255,255,255,.0), rgba(255,255,255,.0)),
+    url("./img/ecg.jpg");
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  .home-card { min-height: 260px; }
+  .home-card__title { font-size: 1rem; }
+  .home-card__desc  { font-size: .9rem; }
+}

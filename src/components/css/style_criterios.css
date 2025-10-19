@@ -1,0 +1,40 @@
+/* Carrusel horizontal con snap y buen touch */
+.scroll-carousel {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: .25rem;
+}
+.scroll-carousel::-webkit-scrollbar { display: none; }
+.scroll-track > .btn { scroll-snap-align: start; }
+
+/* Botón tipo “pill” con área táctil mayor */
+.btn-pill {
+  border-radius: 999px;
+  padding: .5rem 1rem;        /* grande para dedos */
+  white-space: nowrap;
+}
+@media (max-width: 576px) {
+  .btn-pill { padding: .45rem .9rem; font-size: .95rem; }
+}
+
+/* Cards: sombra suave y altura completa de la col */
+.card { min-height: 100%; }
+.card .form-check-input { transform: scale(1.05); } /* hit-area mejor */
+.card .form-label { margin-bottom: .25rem; }
+
+/* Inputs compactos en móvil */
+@media (max-width: 576px) {
+  .container-fluid { padding-left: .75rem; padding-right: .75rem; }
+  .card-header { padding-top: .5rem; padding-bottom: .5rem; }
+  .card-body { padding: .9rem !important; }
+  .form-control, .form-select { font-size: 0.95rem; }
+}
+
+@media (max-width: 576px) {
+  .form-select.form-select-sm,
+  .form-control {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "protocolos": [
+    {
+      "id": "rsi_isr",
+      "titulo": "Intubación de Secuencia Rápida (ISR / RSI)",
+      "objetivo": "Asegurar la vía aérea minimizando riesgo de aspiración y complicaciones, con inducción y parálisis casi simultáneas.",
+      "doseCalcSchema": [
+        { "f": "Etomidato", "unidad": "mg", "dosePerKg": 0.3 },
+        { "f": "Ketamina (inducción)", "unidad": "mg", "dosePerKg": 1.5 },
+        { "f": "Ketamina (shock)", "unidad": "mg", "dosePerKg": 0.75 },
+        { "f": "Propofol", "unidad": "mg", "dosePerKg": 1.5 },
+        { "f": "Succinilcolina", "unidad": "mg", "dosePerKg": 1.5 },
+        { "f": "Rocuronio", "unidad": "mg", "dosePerKg": 1.2 },
+        { "f": "Fentanilo (bolo)", "unidad": "mcg", "dosePerKg": 1.5 },
+        { "f": "Lidocaína (premed)", "unidad": "mg", "dosePerKg": 1.5 }
+      ],
+      "fases": [
+        {
+          "id": "prep",
+          "nombre": "1) Preparación",
+          "puntos": [
+            "Evaluar vía aérea (LEMON/Mallampati, predictores de dificultad).",
+            "Monitorización: ECG, PA no invasiva, SpO₂, capnografía si disponible.",
+            "Preoxigenar con FiO₂ 100% durante 3–5 min (o 8 respiraciones profundas).",
+            "Vía venosa permeable; material listo: tubo adecuado, guía, laringoscopio/video, aspirador, supraglóticos, plan B/C."
+          ]
+        },
+        {
+          "id": "premed",
+          "nombre": "2) Premedicación (opcional, si hay tiempo y no es paro)",
+          "meds": [
+            {
+              "f": "Lidocaína",
+              "dosis": "1.5 mg/kg IV, 2–3 min antes",
+              "notas": "TCE/HTIC, asma; atenúa tos y respuesta simpática."
+            },
+            {
+              "f": "Fentanilo",
+              "dosis": "1–2 mcg/kg IV, 1–2 min antes",
+              "notas": "Atenúa respuesta simpática (HTA/TCE). Administrar lento."
+            },
+            {
+              "f": "Atropina",
+              "dosis": "0.01–0.02 mg/kg IV (mín 0.1 mg, máx 1 mg)",
+              "notas": "Pediatría o riesgo de bradicardia (succinilcolina/hipoxia)."
+            }
+          ]
+        },
+        {
+          "id": "induccion",
+          "nombre": "3) Inducción (hipnótico/sedante)",
+          "meds": [
+            {
+              "f": "Etomidato",
+              "dosis": "0.3 mg/kg IV (inicio 30–60 s; duración 3–5 min)",
+              "notas": "Estable hemodinámicamente. Útil en shock/TCE."
+            },
+            {
+              "f": "Ketamina",
+              "dosis": "1.5 mg/kg IV (0.5–1 mg/kg si shock)",
+              "notas": "Mantiene PA; broncodilatador; puede ↑ salivación."
+            },
+            {
+              "f": "Propofol",
+              "dosis": "1–2 mg/kg IV (0.5–1 mg/kg si shock)",
+              "notas": "Rápido pero hipotensor. Evitar en shock sin soporte."
+            },
+            {
+              "f": "Midazolam",
+              "dosis": "0.2–0.3 mg/kg IV",
+              "notas": "Inicio más lento; riesgo de hipotensión."
+            }
+          ]
+        },
+        {
+          "id": "paralisis",
+          "nombre": "4) Parálisis (bloqueante neuromuscular)",
+          "meds": [
+            {
+              "f": "Succinilcolina",
+              "dosis": "1–1.5 mg/kg IV (hasta 2 mg/kg en niños)",
+              "notas": "CI: hiperK, quemaduras/trauma >24 h, denervación/miopatías, Hx Hipertermia Maligna."
+            },
+            {
+              "f": "Rocuronio",
+              "dosis": "1.2 mg/kg IV (0.6–1.2 mg/kg)",
+              "notas": "Alternativa cuando succinilcolina contraindicada. Revertible con sugammadex."
+            },
+            {
+              "f": "Vecuronio",
+              "dosis": "0.1 mg/kg IV",
+              "notas": "Inicio más lento, menos usado en ISR."
+            }
+          ],
+          "alerta": "Contraindicaciones de succinilcolina: hiperK conocida, quemaduras/trauma >24 h, denervación/miopatías, Hx de Hipertermia Maligna."
+        },
+        {
+          "id": "proteccion",
+          "nombre": "5) Protección y posición",
+          "puntos": [
+            "Posición ‘de olfateo’ o rampa en obesidad.",
+            "Presión cricoidea solo si entrenado y sin comprometer ventilación.",
+            "Evitar BVM salvo desaturación; si necesaria, a baja presión con O₂ alto."
+          ]
+        },
+        {
+          "id": "intubacion",
+          "nombre": "6) Intubación",
+          "puntos": [
+            "Intento a los 60–90 s tras el paralizante.",
+            "Confirmación: capnografía (EtCO₂), ascenso torácico, auscultación.",
+            "Fijar tubo y registrar profundidad dental."
+          ]
+        },
+        {
+          "id": "post",
+          "nombre": "7) Post-intubación (sedoanalgesia y cuidados)",
+          "meds": [
+            { "f": "Midazolam", "dosis": "0.05–0.1 mg/kg/h IV", "notas": "Sedación continua." },
+            { "f": "Propofol", "dosis": "1–5 mg/kg/h IV", "notas": "Vigilar hipotensión/Sx infusión." },
+            { "f": "Fentanilo", "dosis": "1–2 mcg/kg/h IV", "notas": "Analgesia continua." }
+          ],
+          "puntos": [
+            "Monitorizar PA/SpO₂/EtCO₂; prevenir hipotensión post-intubación.",
+            "Rx tórax para confirmar posición del tubo cuando corresponda."
+          ]
+        }
+      ],
+      "perlas": [
+        "En emergencia, hipnóticos más usados: Etomidato o Ketamina.",
+        "Si broncoespasmo: Ketamina es excelente opción.",
+        "Plan B listo: supraglóticos, reintentos limitados, activar ayuda temprano."
+      ]
+    }
+  ]
+}
