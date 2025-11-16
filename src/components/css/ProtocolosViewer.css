@@ -1,0 +1,11 @@
+/* Estilo moderno para descripciones con viñetas */
+.card .descripcion-lista {
+  white-space: pre-line;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-left: 0.5rem;
+}
+
+.card .descripcion-lista::before {
+  content: "";
+}

@@ -1,20 +1,22 @@
 {
   "Criterios_y_Protocolos": [
-    {
-      "id": "proto_rsi",
-      "tipo": "protocolo",
-      "targetId": "rsi_isr",
-      "nombre": "Intubación de Secuencia Rápida (RSI/ISR)",
-      "categoria": "Protocolos",
-      "color": "#0ea5e9",
-      "descripcion": "Procedimiento para asegurar la vía aérea con inducción y parálisis rápidas. Incluye pasos, dosis y calculadora por peso.",
-      "interaccion": {
-        "label": "Ver protocolo",
-        "path": "/protocolos?r=rsi_isr"
-      }
-    },
+   {
+  "id": "proto_rsi",
+  "tipo": "protocolo",
+  "targetId": "rsi_isr",
+  "nombre": "Otros protocolos y actualizaciones disponibles",
+  "categoria": "Protocolos",
+  "color": "#0ea5e9",
+  "descripcion": "Colección de protocolos clínicos diseñada para facilitar decisiones rápidas y seguras en diferentes escenarios médicos. Incluye:\n• Evaluación inicial y criterios de gravedad.\n• Algoritmos de actuación paso a paso.\n• Opciones terapéuticas y manejo farmacológico.\n• Identificación de causas reversibles y puntos críticos.\n• Calculadoras automáticas de dosis basadas en peso (cuando aplica).\n• Recomendaciones finales y perlas de práctica clínica.\nUn recurso estandarizado para reducir la variabilidad, mejorar la seguridad del paciente y optimizar el abordaje en urgencias y emergencias.",
+  "interaccion": {
+    "label": "Ver protocolo",
+    "path": "/protocolos?r=rsi_isr"
+  }
+},
+
     {
       "id": "curb65",
+      "tipo": "criterio",
       "nombre": "CURB-65 en la NAC",
       "categoria": "Neumonía",
       "color": "#B0D5F0",
@@ -74,8 +76,12 @@
         ]
       }
     },
+
+    
+
     {
       "id": "light",
+      "tipo": "criterio",
       "nombre": "Criterios de Light",
       "categoria": "Derrame pleural",
       "color": "#A8E24A",
@@ -91,7 +97,7 @@
         "score": "Exudado si: (protPleural/protSuero > 0.5) OR (ldhPleural/ldhSuero > 0.6) OR (ldhPleural > 2/3 * ldhULN).",
         "decision": [
           {
-            "when": "REGRA TRUE",
+            "when": "true",
             "label": "Exudado",
             "recomendacion": "Estudio etiológico y manejo dirigido; considerar drenaje si complicado.",
             "plan": {
@@ -103,7 +109,7 @@
             }
           },
           {
-            "when": "REGRA FALSE",
+            "when": "false",
             "label": "Trasudado",
             "recomendacion": "Optimizar causa subyacente (IC/cirrosis/nefrosis).",
             "plan": {
@@ -115,8 +121,10 @@
         ]
       }
     },
+
     {
       "id": "sadpersons",
+      "tipo": "criterio",
       "nombre": "Escala SAD PERSONS",
       "categoria": "Salud mental",
       "color": "#FF2D2D",
@@ -173,8 +181,10 @@
         ]
       }
     },
+
     {
       "id": "bisap",
+      "tipo": "criterio",
       "nombre": "BISAP (Pancreatitis aguda)",
       "categoria": "Gastroenterología",
       "color": "#F7B267",
@@ -226,8 +236,10 @@
         ]
       }
     },
+
     {
       "id": "psi",
+      "tipo": "criterio",
       "nombre": "PSI (Pneumonia Severity Index) - simplificado",
       "categoria": "Neumonía",
       "color": "#9AD3DE",
@@ -253,34 +265,56 @@
             "max": 70,
             "label": "Clase I–II (bajo)",
             "recomendacion": "Manejo ambulatorio con plan y control precoz.",
-            "plan": { "destino": "Ambulatorio", "kinesiologia": "Sí (educación respiratoria)", "oxigeno": "Objetivo SpO2 ≥ 92%", "seguimiento": "24–48 h" }
+            "plan": {
+              "destino": "Ambulatorio",
+              "kinesiologia": "Sí (educación respiratoria)",
+              "oxigeno": "Objetivo SpO2 ≥ 92%",
+              "seguimiento": "24–48 h"
+            }
           },
           {
             "min": 71,
             "max": 90,
             "label": "Clase III (intermedio)",
             "recomendacion": "Observación/ingreso breve según soporte social y comorbilidades.",
-            "plan": { "destino": "Observación / Sala corta", "monitor": "SV y SpO2", "tratamiento": "ATB IV/VO según guía", "kinesiologia": "Sí" }
+            "plan": {
+              "destino": "Observación / Sala corta",
+              "monitor": "SV y SpO2",
+              "tratamiento": "ATB IV/VO según guía",
+              "kinesiologia": "Sí"
+            }
           },
           {
             "min": 91,
             "max": 130,
             "label": "Clase IV (alto)",
             "recomendacion": "Ingreso hospitalario.",
-            "plan": { "destino": "Sala de hospitalización", "monitor": "SV continuos si hipoxemia", "oxigeno": "Alto flujo/VMNI si precisa", "kinesiologia": "Sí (según tolerancia)" }
+            "plan": {
+              "destino": "Sala de hospitalización",
+              "monitor": "SV continuos si hipoxemia",
+              "oxigeno": "Alto flujo/VMNI si precisa",
+              "kinesiologia": "Sí (según tolerancia)"
+            }
           },
           {
             "min": 131,
             "max": 999,
             "label": "Clase V (muy alto)",
             "recomendacion": "Alto riesgo; considerar UTI.",
-            "plan": { "destino": "UTI", "criterios_uti": "Inestabilidad hemodinámica o ventilatoria", "tratamiento": "ATB amplio; bundle sepsis si aplica", "kinesiologia": "Con precaución" }
+            "plan": {
+              "destino": "UTI",
+              "criterios_uti": "Inestabilidad hemodinámica o ventilatoria",
+              "tratamiento": "ATB amplio; bundle sepsis si aplica",
+              "kinesiologia": "Con precaución"
+            }
           }
         ]
       }
     },
+
     {
       "id": "scap",
+      "tipo": "criterio",
       "nombre": "SCAP Score",
       "categoria": "Neumonía",
       "color": "#84C1FF",
@@ -298,14 +332,46 @@
         ],
         "score": "Suma ponderada.",
         "ranges": [
-          { "min": 0, "max": 9, "label": "Bajo", "recomendacion": "Ambulatorio u observación con ATB y plan de control.", "plan": { "destino": "Ambulatorio/Observación", "kinesiologia": "Sí", "seguimiento": "24–48 h" } },
-          { "min": 10, "max": 19, "label": "Intermedio", "recomendacion": "Ingreso en sala, monitorización y oxigenoterapia según necesidad.", "plan": { "destino": "Sala", "monitor": "SV/SpO2", "kinesiologia": "Sí" } },
-          { "min": 20, "max": 999, "label": "Alto", "recomendacion": "Valorar UTI por alto riesgo de falla respiratoria.", "plan": { "destino": "Sala de agudos / UTI", "oxigeno": "HFNC/VMNI si precisa", "kinesiologia": "Con precaución" } }
+          {
+            "min": 0,
+            "max": 9,
+            "label": "Bajo",
+            "recomendacion": "Ambulatorio u observación con ATB y plan de control.",
+            "plan": {
+              "destino": "Ambulatorio/Observación",
+              "kinesiologia": "Sí",
+              "seguimiento": "24–48 h"
+            }
+          },
+          {
+            "min": 10,
+            "max": 19,
+            "label": "Intermedio",
+            "recomendacion": "Ingreso en sala, monitorización y oxigenoterapia según necesidad.",
+            "plan": {
+              "destino": "Sala",
+              "monitor": "SV/SpO2",
+              "kinesiologia": "Sí"
+            }
+          },
+          {
+            "min": 20,
+            "max": 999,
+            "label": "Alto",
+            "recomendacion": "Valorar UTI por alto riesgo de falla respiratoria.",
+            "plan": {
+              "destino": "Sala de agudos / UTI",
+              "oxigeno": "HFNC/VMNI si precisa",
+              "kinesiologia": "Con precaución"
+            }
+          }
         ]
       }
     },
+
     {
       "id": "cpss",
+      "tipo": "criterio",
       "nombre": "CPSS (Cincinnati Stroke Scale)",
       "categoria": "Neurología",
       "color": "#B4E197",
@@ -318,13 +384,33 @@
         ],
         "score": "Suma (0-3).",
         "ranges": [
-          { "min": 0, "max": 0, "label": "Baja probabilidad", "recomendacion": "Valorar otras causas; si dudas y tiempo de inicio < 4.5 h, derivar para TC.", "plan": { "destino": "Ambulatorio/Derivación no urgente" } },
-          { "min": 1, "max": 3, "label": "Alta probabilidad", "recomendacion": "Activar código ACV y traslado a centro con TC/trombólisis.", "plan": { "destino": "Urgencias / Unidad ACV", "monitor": "SV, glucemia, NIHSS", "tratamiento": "Ventana terapéutica trombólisis/trombectomía" } }
+          {
+            "min": 0,
+            "max": 0,
+            "label": "Baja probabilidad",
+            "recomendacion": "Valorar otras causas; si dudas y tiempo de inicio < 4.5 h, derivar para TC.",
+            "plan": {
+              "destino": "Ambulatorio/Derivación no urgente"
+            }
+          },
+          {
+            "min": 1,
+            "max": 3,
+            "label": "Alta probabilidad",
+            "recomendacion": "Activar código ACV y traslado a centro con TC/trombólisis.",
+            "plan": {
+              "destino": "Urgencias / Unidad ACV",
+              "monitor": "SV, glucemia, NIHSS",
+              "tratamiento": "Ventana terapéutica trombólisis/trombectomía"
+            }
+          }
         ]
       }
     },
+
     {
       "id": "gcs",
+      "tipo": "criterio",
       "nombre": "Glasgow Coma Scale",
       "categoria": "Neurología",
       "color": "#D6C3FF",
@@ -337,14 +423,45 @@
         ],
         "score": "eye + verbal + motor (3-15).",
         "ranges": [
-          { "min": 13, "max": 15, "label": "Leve", "recomendacion": "Observación y reevaluación neurológica.", "plan": { "destino": "Ambulatorio/Observación", "imagen": "TC si trauma/anticoagulación/síntomas de alarma" } },
-          { "min": 9, "max": 12, "label": "Moderado", "recomendacion": "Ingreso; monitorización y neuroimagen.", "plan": { "destino": "Sala/Unidad de agudos", "monitor": "SV/neurológico seriado", "imagen": "TC urgente" } },
-          { "min": 3, "max": 8, "label": "Grave", "recomendacion": "Asegurar vía aérea y UTI.", "plan": { "destino": "UTI", "via_aerea": "Intubar si GCS ≤ 8", "monitor": "PIC si TCE grave" } }
+          {
+            "min": 13,
+            "max": 15,
+            "label": "Leve",
+            "recomendacion": "Observación y reevaluación neurológica.",
+            "plan": {
+              "destino": "Ambulatorio/Observación",
+              "imagen": "TC si trauma/anticoagulación/síntomas de alarma"
+            }
+          },
+          {
+            "min": 9,
+            "max": 12,
+            "label": "Moderado",
+            "recomendacion": "Ingreso; monitorización y neuroimagen.",
+            "plan": {
+              "destino": "Sala/Unidad de agudos",
+              "monitor": "SV/neurológico seriado",
+              "imagen": "TC urgente"
+            }
+          },
+          {
+            "min": 3,
+            "max": 8,
+            "label": "Grave",
+            "recomendacion": "Asegurar vía aérea y UTI.",
+            "plan": {
+              "destino": "UTI",
+              "via_aerea": "Intubar si GCS ≤ 8",
+              "monitor": "PIC si TCE grave"
+            }
+          }
         ]
       }
     },
+
     {
       "id": "gbs",
+      "tipo": "criterio",
       "nombre": "Glasgow-Blatchford Score",
       "categoria": "Digestivo (HDA)",
       "color": "#FCE38A",
@@ -362,13 +479,36 @@
         ],
         "score": "Puntaje ponderado (implementar mapeo).",
         "ranges": [
-          { "min": 0, "max": 0, "label": "Muy bajo", "recomendacion": "Alta precoz con plan; PPI y endoscopia ambulatoria.", "plan": { "destino": "Ambulatorio", "tratamiento": "IBP", "seguimiento": "Endoscopia programada" } },
-          { "min": 1, "max": 999, "label": "Riesgo", "recomendacion": "Ingreso para reanimación y endoscopia temprana.", "plan": { "destino": "Sala/UTI según inestabilidad", "monitor": "SV, Hb seriada", "tratamiento": "Fluidos, transfusión según umbral, IBP IV", "procedimiento": "Endoscopia en 12–24 h (urgente si inestable)" } }
+          {
+            "min": 0,
+            "max": 0,
+            "label": "Muy bajo",
+            "recomendacion": "Alta precoz con plan; PPI y endoscopia ambulatoria.",
+            "plan": {
+              "destino": "Ambulatorio",
+              "tratamiento": "IBP",
+              "seguimiento": "Endoscopia programada"
+            }
+          },
+          {
+            "min": 1,
+            "max": 999,
+            "label": "Riesgo",
+            "recomendacion": "Ingreso para reanimación y endoscopia temprana.",
+            "plan": {
+              "destino": "Sala/UTI según inestabilidad",
+              "monitor": "SV, Hb seriada",
+              "tratamiento": "Fluidos, transfusión según umbral, IBP IV",
+              "procedimiento": "Endoscopia en 12–24 h (urgente si inestable)"
+            }
+          }
         ]
       }
     },
+
     {
       "id": "spesi",
+      "tipo": "criterio",
       "nombre": "sPESI",
       "categoria": "Tromboembolismo pulmonar",
       "color": "#90E0EF",
@@ -385,13 +525,36 @@
         ],
         "score": "Suma (0-6).",
         "ranges": [
-          { "min": 0, "max": 0, "label": "Bajo riesgo", "recomendacion": "Anticoagulación ambulatoria con seguimiento estrecho.", "plan": { "destino": "Ambulatorio (si hemodinámicamente estable)", "tratamiento": "ACOD/Heparina LMWH", "seguimiento": "Control 24–72 h y educación alarma" } },
-          { "min": 1, "max": 6, "label": "No bajo riesgo", "recomendacion": "Ingreso para monitorización y estratificación (ecocardio, biomarcadores).", "plan": { "destino": "Sala/UTI según hemodinamia", "monitor": "SV continuos, SaO2", "tratamiento": "Anticoagulación; considerar trombólisis si inestabilidad", "kinesiologia": "Deambulación guiada cuando sea seguro" } }
+          {
+            "min": 0,
+            "max": 0,
+            "label": "Bajo riesgo",
+            "recomendacion": "Anticoagulación ambulatoria con seguimiento estrecho.",
+            "plan": {
+              "destino": "Ambulatorio (si hemodinámicamente estable)",
+              "tratamiento": "ACOD/Heparina LMWH",
+              "seguimiento": "Control 24–72 h y educación alarma"
+            }
+          },
+          {
+            "min": 1,
+            "max": 6,
+            "label": "No bajo riesgo",
+            "recomendacion": "Ingreso para monitorización y estratificación (ecocardio, biomarcadores).",
+            "plan": {
+              "destino": "Sala/UTI según hemodinamia",
+              "monitor": "SV continuos, SaO2",
+              "tratamiento": "Anticoagulación; considerar trombólisis si inestabilidad",
+              "kinesiologia": "Deambulación guiada cuando sea seguro"
+            }
+          }
         ]
       }
     },
+
     {
       "id": "apgar",
+      "tipo": "criterio",
       "nombre": "APGAR Neonatal",
       "categoria": "Neonatología",
       "color": "#FFBCD1",
@@ -406,14 +569,43 @@
         ],
         "score": "Suma (0-10).",
         "ranges": [
-          { "min": 7, "max": 10, "label": "Normal", "recomendacion": "Cuidados rutinarios del RN.", "plan": { "destino": "Alojamiento conjunto", "monitor": "Controles habituales" } },
-          { "min": 4, "max": 6, "label": "Moderado", "recomendacion": "Soporte y reevaluación; considerar CPAP si dificultad respiratoria.", "plan": { "destino": "Unidad intermedia", "tratamiento": "Termorregulación, manejo respiratorio suave" } },
-          { "min": 0, "max": 3, "label": "Bajo", "recomendacion": "Reanimación neonatal inmediata.", "plan": { "destino": "UTI neonatal", "tratamiento": "Vía aérea, ventilación, fármacos según algoritmo" } }
+          {
+            "min": 7,
+            "max": 10,
+            "label": "Normal",
+            "recomendacion": "Cuidados rutinarios del RN.",
+            "plan": {
+              "destino": "Alojamiento conjunto",
+              "monitor": "Controles habituales"
+            }
+          },
+          {
+            "min": 4,
+            "max": 6,
+            "label": "Moderado",
+            "recomendacion": "Soporte y reevaluación; considerar CPAP si dificultad respiratoria.",
+            "plan": {
+              "destino": "Unidad intermedia",
+              "tratamiento": "Termorregulación, manejo respiratorio suave"
+            }
+          },
+          {
+            "min": 0,
+            "max": 3,
+            "label": "Bajo",
+            "recomendacion": "Reanimación neonatal inmediata.",
+            "plan": {
+              "destino": "UTI neonatal",
+              "tratamiento": "Vía aérea, ventilación, fármacos según algoritmo"
+            }
+          }
         ]
       }
     },
+
     {
       "id": "tal",
+      "tipo": "criterio",
       "nombre": "Score TAL (Bronquiolitis)",
       "categoria": "Pediatría",
       "color": "#EEC4A5",
@@ -427,14 +619,46 @@
         ],
         "score": "Suma (0-8).",
         "ranges": [
-          { "min": 0, "max": 3, "label": "Leve", "recomendacion": "Manejo ambulatorio y educación a cuidadores.", "plan": { "destino": "Ambulatorio", "kinesiologia": "Lavados nasales, aspiración suave", "oxigeno": "No suele requerir" } },
-          { "min": 4, "max": 6, "label": "Moderado", "recomendacion": "Observación/ingreso; O2 y NBZ según respuesta.", "plan": { "destino": "Sala", "monitor": "SpO2, alimentación/hidratación", "kinesiologia": "Técnicas nasales; posicionamiento" } },
-          { "min": 7, "max": 8, "label": "Grave", "recomendacion": "Ingreso; soporte respiratorio intensivo.", "plan": { "destino": "UTI pediátrica", "oxigeno": "Alto flujo/VMNI", "kinesiologia": "Con coordinación estrecha" } }
+          {
+            "min": 0,
+            "max": 3,
+            "label": "Leve",
+            "recomendacion": "Manejo ambulatorio y educación a cuidadores.",
+            "plan": {
+              "destino": "Ambulatorio",
+              "kinesiologia": "Lavados nasales, aspiración suave",
+              "oxigeno": "No suele requerir"
+            }
+          },
+          {
+            "min": 4,
+            "max": 6,
+            "label": "Moderado",
+            "recomendacion": "Observación/ingreso; O2 y NBZ según respuesta.",
+            "plan": {
+              "destino": "Sala",
+              "monitor": "SpO2, alimentación/hidratación",
+              "kinesiologia": "Técnicas nasales; posicionamiento"
+            }
+          },
+          {
+            "min": 7,
+            "max": 8,
+            "label": "Grave",
+            "recomendacion": "Ingreso; soporte respiratorio intensivo.",
+            "plan": {
+              "destino": "UTI pediátrica",
+              "oxigeno": "Alto flujo/VMNI",
+              "kinesiologia": "Con coordinación estrecha"
+            }
+          }
         ]
       }
     },
+
     {
       "id": "hta_crisis",
+      "tipo": "criterio",
       "nombre": "Crisis hipertensiva (urgencia vs. emergencia)",
       "categoria": "Cardiovascular",
       "color": "#FF8A65",
@@ -481,8 +705,10 @@
         ]
       }
     },
+
     {
       "id": "sgarbossa_smith",
+      "tipo": "criterio",
       "nombre": "Criterios de Sgarbossa (mod. Smith) en BCRI",
       "categoria": "Cardiovascular",
       "color": "#E57373",
@@ -522,13 +748,18 @@
             "when": "!bcri",
             "label": "No aplicable (sin BCRI)",
             "recomendacion": "Use criterios habituales de IAM en ECG sin BCRI.",
-            "plan": { "destino": "Según protocolo de dolor torácico", "kinesiologia": "N/A" }
+            "plan": {
+              "destino": "Según protocolo de dolor torácico",
+              "kinesiologia": "N/A"
+            }
           }
         ]
       }
     },
+
     {
       "id": "rehab_post_iam",
+      "tipo": "criterio",
       "nombre": "Rehabilitación cardíaca post-IAM",
       "categoria": "Cardiovascular",
       "color": "#64B5F6",
@@ -602,8 +833,10 @@
         ]
       }
     },
+
     {
       "id": "cha2ds2vasc",
+      "tipo": "criterio",
       "nombre": "CHA₂DS₂-VASc",
       "categoria": "Cardiología",
       "color": "#DC143C",
@@ -654,6 +887,213 @@
           }
         ]
       }
-    }
+    },
+    {
+  "id": "crisis_hiperglucemicas_ada2025",
+  "tipo": "criterio",
+  "categoria": "Endocrinología",
+  "nombre": "Crisis hiperglucémicas – ADA 2025",
+  "color": "#64748b",
+  "descripcion": "Clasificación de cetoacidosis diabética (leve, moderada, grave) y estado hiperosmolar según ADA 2025.",
+  "form": {
+    "fields": [
+      {
+        "key": "glucosa",
+        "label": "Glucemia (mg/dL)",
+        "type": "number"
+      },
+      {
+        "key": "ph",
+        "label": "pH arterial",
+        "type": "number"
+      },
+      {
+        "key": "bicarbonato",
+        "label": "Bicarbonato (mEq/L)",
+        "type": "number"
+      },
+      {
+        "key": "bhb",
+        "label": "β-hidroxibutirato (mmol/L)",
+        "type": "number"
+      },
+      {
+        "key": "osm",
+        "label": "Osmolaridad efectiva (mOsm/kg)",
+        "type": "number"
+      },
+      {
+        "key": "estadoMental",
+        "label": "Estado mental",
+        "type": "select",
+        "options": [
+          { "label": "Alerta", "value": "alerta" },
+          { "label": "Somnolencia", "value": "somno" },
+          { "label": "Estupor", "value": "estupor" },
+          { "label": "Coma", "value": "coma" }
+        ]
+      }
+    ],
+    "ranges": [
+      {
+        "label": "CAD Leve",
+        "recomendacion": "Manejo en sala general. Iniciar líquidos, insulina y corrección de electrolitos.",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "label": "CAD Moderada",
+        "recomendacion": "Manejo en sala monitorizada o intermedia.",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "label": "CAD Grave",
+        "recomendacion": "Manejo en UCI. Riesgo de edema cerebral y shock.",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "label": "Estado hiperosmolar",
+        "recomendacion": "Urgencia vital. Reanimación intensiva y corrección gradual de osmolaridad.",
+        "min": 4,
+        "max": 4
+      }
+    ]
+  }
+},
+{
+  "id": "diagnostico_diabetes_ada2025",
+  "tipo": "criterio",
+  "categoria": "Endocrinología",
+  "nombre": "Criterios Diagnósticos de Diabetes – ADA 2025",
+  "color": "#0ea5e9",
+  "descripcion": "Diagnóstico basado en HbA1c, glucosa en ayunas, PTOG y síntomas clásicos + glicemia.",
+  "form": {
+    "fields": [
+      {
+        "key": "hba1c",
+        "label": "HbA1c (%)",
+        "type": "number"
+      },
+      {
+        "key": "glucAyunas",
+        "label": "Glucosa en ayunas (mg/dL)",
+        "type": "number"
+      },
+      {
+        "key": "glucPost",
+        "label": "Glucosa 2h post carga (mg/dL)",
+        "type": "number"
+      },
+      {
+        "key": "sintomas",
+        "label": "Síntomas clásicos (poliuria, polidipsia, pérdida peso)",
+        "type": "boolean"
+      },
+      {
+        "key": "glucRandom",
+        "label": "Glucosa aleatoria (mg/dL)",
+        "type": "number"
+      }
+    ],
+    "decision": [
+      {
+        "when": "hba1c >= 6.5",
+        "label": "Diabetes por HbA1c",
+        "recomendacion": "Confirmar con una segunda medición o método diferente."
+      },
+      {
+        "when": "glucAyunas >= 126",
+        "label": "Diabetes por glucosa en ayunas",
+        "recomendacion": "Repetir en día distinto si no hay síntomas."
+      },
+      {
+        "when": "glucPost >= 200",
+        "label": "Diabetes por PTOG",
+        "recomendacion": "Mide intolerancia a carbohidratos."
+      },
+      {
+        "when": "sintomas && glucRandom >= 200",
+        "label": "Diabetes con criterios clínicos",
+        "recomendacion": "Diagnóstico inmediato."
+      }
+    ]
+  }
+},
+{
+  "id": "kdigo_aki_akd_ckd_2025",
+  "tipo": "criterio",
+  "categoria": "Nefrología",
+  "nombre": "KDIGO 2025 – AKI, AKD y CKD",
+  "color": "#16a34a",
+  "descripcion": "Definiciones KDIGO 2025 para lesiones y enfermedades renales agudas y crónicas.",
+  "form": {
+    "fields": [
+      {
+        "key": "creatinina",
+        "label": "Aumento creatinina en 48 h (mg/dL)",
+        "type": "number"
+      },
+      {
+        "key": "creaBasal",
+        "label": "Cambio relativo vs basal (multiplicador)",
+        "type": "number"
+      },
+      {
+        "key": "diuresis",
+        "label": "Diuresis (mL/kg/h)",
+        "type": "number"
+      },
+      {
+        "key": "tiempoDias",
+        "label": "Días de evolución",
+        "type": "number"
+      },
+      {
+        "key": "tfg",
+        "label": "TFG estimada (mL/min/1.73m2)",
+        "type": "number"
+      },
+      {
+        "key": "danio",
+        "label": "Evidencia de daño (albuminuria, imagen, biopsia)",
+        "type": "boolean"
+      }
+    ],
+    "ranges": [
+      {
+        "min": 1,
+        "max": 1,
+        "label": "AKI (Lesión Renal Aguda)",
+        "recomendacion": "Daño súbito y potencialmente reversible.",
+        "plan": {
+          "manejo": "Revisar causas prerrenales, renales y postrenales.",
+          "monitorización": "Control de diuresis y electrolitos."
+        }
+      },
+      {
+        "min": 2,
+        "max": 2,
+        "label": "AKD (Enfermedad Renal Aguda)",
+        "recomendacion": "AKI prolongado o deterioro renal agudo sin criterios crónicos.",
+        "plan": {
+          "seguimiento": "Repetir función renal y orina seriada.",
+          "imagen": "Ecografía renal si no está realizada."
+        }
+      },
+      {
+        "min": 3,
+        "max": 3,
+        "label": "CKD (Enfermedad Renal Crónica)",
+        "recomendacion": "Disfunción renal persistente ≥3 meses.",
+        "plan": {
+          "evaluacion": "Estimar progresión, riesgo cardiovascular, proteinuria.",
+          "tratamiento": "IECA/ARA-II si proteinuria. Control estricto TA."
+        }
+      }
+    ]
+  }
+}
   ]
 }

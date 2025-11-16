@@ -1,0 +1,83 @@
+{
+  "id": "rcp_aha_2025",
+  "titulo": "RCP de Alta Calidad – AHA 2025",
+  "subtitulo": "American Heart Association • ACLS 2025",
+  "color": "#ef4444",
+
+  "secciones": [
+    {
+      "titulo": "RCP de Alta Calidad (High-Quality CPR)",
+      "contenido": [
+        "Comprimir fuerte (al menos 5 cm o 2 pulgadas).",
+        "Comprimir rápido (100–120/min).",
+        "Permitir la expansión completa del tórax.",
+        "Minimizar interrupciones.",
+        "Evitar ventilación excesiva.",
+        "Cambiar reanimador cada 2 minutos o antes si se fatiga.",
+        "Si no hay vía aérea avanzada: relación 30:2.",
+        "Con vía aérea avanzada: 1 ventilación cada 6 segundos (10/min) con compresiones continuas.",
+        "Monitorizar con capnografía.",
+        "Si ETCO₂ está bajo o disminuye, reevaluar la calidad de la RCP."
+      ]
+    },
+
+    {
+      "titulo": "Energía para Desfibrilación",
+      "contenido": [
+        "Bifásica: seguir fabricante (120–200 J inicial).",
+        "Si se desconoce, usar dosis máxima disponible.",
+        "Las dosis subsecuentes deben ser iguales o mayores.",
+        "Monofásica: 360 J."
+      ]
+    },
+
+    {
+      "titulo": "Terapia Farmacológica",
+      "contenido": [
+        "Epinefrina IV/IO: 1 mg cada 3–5 minutos.",
+        "Amiodarona IV/IO:",
+        " • Primera dosis: 300 mg.",
+        " • Segunda dosis: 150 mg.",
+        "Lidocaína IV/IO:",
+        " • Primera dosis: 1–1.5 mg/kg.",
+        " • Segunda dosis: 0.5–0.75 mg/kg."
+      ]
+    },
+
+    {
+      "titulo": "Vía Aérea Avanzada",
+      "contenido": [
+        "Intubación orotraqueal o dispositivo supraglótico.",
+        "Capnografía/capnometría continua para confirmar tubo."
+      ]
+    },
+
+    {
+      "titulo": "Causas Reversibles (5 H – 5 T)",
+      "contenido": [
+        "🔹 **5 H**",
+        " • Hipovolemia",
+        " • Hipoxia",
+        " • Acidosis (H+)",
+        " • Hipo/Hiperpotasemia",
+        " • Hipotermia",
+        "",
+        "🔹 **5 T**",
+        " • Tórax a tensión",
+        " • Taponamiento cardíaco",
+        " • Tóxicos",
+        " • Trombosis pulmonar",
+        " • Trombosis coronaria"
+      ]
+    },
+
+    {
+      "titulo": "Notas Clínicas Importantes",
+      "contenido": [
+        "ETCO₂ < 10 mmHg durante RCP → compresiones inefectivas.",
+        "Reevaluar ritmo cada 2 minutos.",
+        "Si no hay respuesta tras varios ciclos, evaluar causas reversibles."
+      ]
+    }
+  ]
+}

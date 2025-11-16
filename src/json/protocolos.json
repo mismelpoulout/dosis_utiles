@@ -1,18 +1,50 @@
 {
   "protocolos": [
     {
-      "id": "rsi_isr",
+      "id": "proto_rsi",
       "titulo": "Intubación de Secuencia Rápida (ISR / RSI)",
       "objetivo": "Asegurar la vía aérea minimizando riesgo de aspiración y complicaciones, con inducción y parálisis casi simultáneas.",
       "doseCalcSchema": [
-        { "f": "Etomidato", "unidad": "mg", "dosePerKg": 0.3 },
-        { "f": "Ketamina (inducción)", "unidad": "mg", "dosePerKg": 1.5 },
-        { "f": "Ketamina (shock)", "unidad": "mg", "dosePerKg": 0.75 },
-        { "f": "Propofol", "unidad": "mg", "dosePerKg": 1.5 },
-        { "f": "Succinilcolina", "unidad": "mg", "dosePerKg": 1.5 },
-        { "f": "Rocuronio", "unidad": "mg", "dosePerKg": 1.2 },
-        { "f": "Fentanilo (bolo)", "unidad": "mcg", "dosePerKg": 1.5 },
-        { "f": "Lidocaína (premed)", "unidad": "mg", "dosePerKg": 1.5 }
+        {
+          "f": "Etomidato",
+          "unidad": "mg",
+          "dosePerKg": 0.3
+        },
+        {
+          "f": "Ketamina (inducción)",
+          "unidad": "mg",
+          "dosePerKg": 1.5
+        },
+        {
+          "f": "Ketamina (shock)",
+          "unidad": "mg",
+          "dosePerKg": 0.75
+        },
+        {
+          "f": "Propofol",
+          "unidad": "mg",
+          "dosePerKg": 1.5
+        },
+        {
+          "f": "Succinilcolina",
+          "unidad": "mg",
+          "dosePerKg": 1.5
+        },
+        {
+          "f": "Rocuronio",
+          "unidad": "mg",
+          "dosePerKg": 1.2
+        },
+        {
+          "f": "Fentanilo (bolo)",
+          "unidad": "mcg",
+          "dosePerKg": 1.5
+        },
+        {
+          "f": "Lidocaína (premed)",
+          "unidad": "mg",
+          "dosePerKg": 1.5
+        }
       ],
       "fases": [
         {
@@ -116,9 +148,21 @@
           "id": "post",
           "nombre": "7) Post-intubación (sedoanalgesia y cuidados)",
           "meds": [
-            { "f": "Midazolam", "dosis": "0.05–0.1 mg/kg/h IV", "notas": "Sedación continua." },
-            { "f": "Propofol", "dosis": "1–5 mg/kg/h IV", "notas": "Vigilar hipotensión/Sx infusión." },
-            { "f": "Fentanilo", "dosis": "1–2 mcg/kg/h IV", "notas": "Analgesia continua." }
+            {
+              "f": "Midazolam",
+              "dosis": "0.05–0.1 mg/kg/h IV",
+              "notas": "Sedación continua."
+            },
+            {
+              "f": "Propofol",
+              "dosis": "1–5 mg/kg/h IV",
+              "notas": "Vigilar hipotensión/Sx infusión."
+            },
+            {
+              "f": "Fentanilo",
+              "dosis": "1–2 mcg/kg/h IV",
+              "notas": "Analgesia continua."
+            }
           ],
           "puntos": [
             "Monitorizar PA/SpO₂/EtCO₂; prevenir hipotensión post-intubación.",
@@ -131,6 +175,347 @@
         "Si broncoespasmo: Ketamina es excelente opción.",
         "Plan B listo: supraglóticos, reintentos limitados, activar ayuda temprano."
       ]
+    },
+    {
+      "id": "rcp_aha_2025",
+      "titulo": "RCP de Alta Calidad – AHA 2025",
+      "objetivo": "Guía rápida basada en ACLS 2025.",
+      "fases": [
+        {
+          "id": "hq",
+          "nombre": "1) RCP de Alta Calidad",
+          "puntos": [
+            "Comprimir fuerte (al menos 5 cm / 2 pulgadas).",
+            "Comprimir rápido (100–120/min).",
+            "Permitir la expansión completa del tórax.",
+            "Minimizar interrupciones en las compresiones.",
+            "Evitar ventilación excesiva.",
+            "Cambiar reanimador cada 2 minutos.",
+            "Sin vía aérea avanzada: 30:2.",
+            "Con vía aérea avanzada: 1 ventilación cada 6 s (10/min).",
+            "Monitorizar con capnografía.",
+            "ETCO₂ bajo sugiere mala calidad de RCP."
+          ]
+        },
+        {
+          "id": "descarga",
+          "nombre": "2) Energía para Desfibrilación",
+          "puntos": [
+            "Bifásica inicial: 120–200 J.",
+            "Si se desconoce: usar máxima energía disponible.",
+            "Subsecuentes: igual o mayor.",
+            "Monofásica: 360 J."
+          ]
+        },
+        {
+          "id": "farmacos",
+          "nombre": "3) Terapia Farmacológica",
+          "puntos": [
+            "Epinefrina 1 mg IV/IO cada 3–5 min.",
+            "Amiodarona: 300 mg → luego 150 mg.",
+            "Lidocaína: 1–1.5 mg/kg → luego 0.5–0.75 mg/kg."
+          ]
+        },
+        {
+          "id": "airway",
+          "nombre": "4) Vía Aérea Avanzada",
+          "puntos": [
+            "Intubación endotraqueal o dispositivo supraglótico.",
+            "Confirmar con capnografía continua."
+          ]
+        },
+        {
+          "id": "causas",
+          "nombre": "5) Causas Reversibles (H y T)",
+          "puntos": [
+            "Hipovolemia",
+            "Hipoxia",
+            "Hidrógeno (acidosis)",
+            "Hipo/hiperpotasemia",
+            "Hipotermia",
+            "Neumotórax a tensión",
+            "Taponamiento cardíaco",
+            "Tóxicos",
+            "Trombosis pulmonar",
+            "Trombosis coronaria"
+          ]
+        }
+      ],
+      "perlas": [
+        "ETCO₂ < 10 mmHg sugiere compresiones inefectivas.",
+        "Reevaluar ritmo cada 2 minutos.",
+        "Considerar causas reversibles si no hay recuperación."
+      ]
+    },
+    {
+      "id": "rcp_pediatric_2025",
+      "titulo": "RCP Pediátrico – AHA 2025",
+      "objetivo": "Reanimación cardiopulmonar para lactantes y niños según AHA 2025.",
+      "fases": [
+        {
+          "id": "calidad",
+          "nombre": "1) RCP de Alta Calidad – Pediatría",
+          "puntos": [
+            "Frecuencia 100–120/min.",
+            "Profundidad: 4 cm (lactantes) y 5 cm (niños).",
+            "Permitir expansión completa del tórax.",
+            "Relación compresión–ventilación: 30:2 (1 reanimador), 15:2 (2 reanimadores).",
+            "Con vía aérea avanzada: 1 ventilación cada 2–3 segundos.",
+            "Evitar ventilación excesiva.",
+            "Cambiar reanimador cada 2 minutos."
+          ]
+        },
+        {
+          "id": "descarga",
+          "nombre": "2) Energía para Desfibrilación",
+          "puntos": [
+            "Dosis inicial: 2 J/kg.",
+            "Siguientes: 4 J/kg.",
+            "Máximo: 10 J/kg."
+          ]
+        },
+        {
+          "id": "farmacos",
+          "nombre": "3) Fármacos",
+          "puntos": [
+            "Epinefrina: 0.01 mg/kg IV/IO cada 3–5 min.",
+            "Amiodarona: 5 mg/kg IV/IO.",
+            "Lidocaína: 1 mg/kg."
+          ]
+        }
+      ],
+      "perlas": [
+        "Capnografía útil para valorar efectividad.",
+        "Ritmos desfibrilables menos frecuentes que en adultos."
+      ]
+    },
+    {
+      "id": "rcp_neonatal_2025",
+      "titulo": "RCP Neonatal – AHA 2025",
+      "objetivo": "Reanimación del recién nacido al nacer según AHA.",
+      "fases": [
+        {
+          "id": "eval",
+          "nombre": "1) Evaluación Inicial",
+          "puntos": [
+            "¿Respira o llora?",
+            "¿Tono adecuado?",
+            "¿A término?",
+            "Si NO → iniciar pasos iniciales."
+          ]
+        },
+        {
+          "id": "iniciales",
+          "nombre": "2) Pasos Iniciales (30 s)",
+          "puntos": [
+            "Calor — secar — estimular.",
+            "Posicionar vía aérea.",
+            "Aspirar si hay obstrucción evidente.",
+            "Monitoreo de frecuencia cardíaca."
+          ]
+        },
+        {
+          "id": "ventilar",
+          "nombre": "3) Ventilación a Presión Positiva",
+          "puntos": [
+            "Iniciar si FC < 100.",
+            "Frecuencia: 40–60/min.",
+            "Evaluar elevación torácica.",
+            "Reevaluar cada 30 segundos."
+          ]
+        },
+        {
+          "id": "rcp",
+          "nombre": "4) Iniciar RCP",
+          "puntos": [
+            "Indicación: FC < 60 pese a ventilación efectiva.",
+            "Relación 3:1 (compresión:ventilación).",
+            "Frecuencia total: 120 eventos/min (90C + 30V)."
+          ]
+        }
+      ],
+      "perlas": [
+        "La ventilación es la intervención MÁS importante.",
+        "La mayoría de neonatos responde a ventilación sin necesidad de RCP."
+      ]
+    },
+    {
+      "id": "taquicardias_2025",
+      "titulo": "Manejo de Taquicardias – AHA ACLS 2025",
+      "objetivo": "Evaluación y manejo de taquicardia con y sin pulso.",
+      "fases": [
+        {
+          "id": "eval",
+          "nombre": "1) Evaluación Inicial",
+          "puntos": [
+            "Identificar si QRS estrecho o ancho.",
+            "Evaluar estabilidad: hipotensión, confusión, dolor torácico, shock.",
+            "Si inestable → cardioversión inmediata."
+          ]
+        },
+        {
+          "id": "narrow",
+          "nombre": "2) Taquicardia QRS Estrecho",
+          "puntos": [
+            "Maniobras vagales.",
+            "Adenosina 6 mg IV bolo → si falla 12 mg.",
+            "Beta-bloqueadores o bloqueadores de calcio si regular."
+          ]
+        },
+        {
+          "id": "wide",
+          "nombre": "3) Taquicardia QRS Ancho",
+          "puntos": [
+            "Amiodarona 150 mg en 10 min.",
+            "Procainamida 20–50 mg/min.",
+            "Cardioversión si inestable."
+          ]
+        }
+      ],
+      "perlas": [
+        "Adenosina útil solo en taquicardias regulares.",
+        "No usar verapamilo en taquicardia de QRS ancho."
+      ]
+    },
+    {
+      "id": "bradicardia_2025",
+      "titulo": "Manejo de Bradicardia – AHA 2025",
+      "objetivo": "Abordaje de bradicardia sintomática.",
+      "fases": [
+        {
+          "id": "eval",
+          "nombre": "1) Evaluación Inicial",
+          "puntos": [
+            "Identificar signos de mala perfusión.",
+            "Causas reversibles.",
+            "ECG inmediato."
+          ]
+        },
+        {
+          "id": "farmacos",
+          "nombre": "2) Tratamiento Farmacológico",
+          "puntos": [
+            "Atropina 1 mg IV cada 3–5 min (máx 3 mg).",
+            "Si no mejora:",
+            " • Dopamina 5–20 mcg/kg/min.",
+            " • Epinefrina 2–10 mcg/min."
+          ]
+        },
+        {
+          "id": "pacing",
+          "nombre": "3) Estimulación",
+          "puntos": [
+            "Considerar marcapasos transcutáneo si no responde a fármacos.",
+            "Sedación si es posible."
+          ]
+        }
+      ],
+      "perlas": [
+        "La atropina es primera línea.",
+        "Si hay bloqueo AV alto grado → ir pronto a marcapasos."
+      ]
+    },
+    {
+      "id": "shock_septico_2025",
+      "titulo": "Shock Séptico – Manejo Inicial 2025",
+      "objetivo": "Reconocimiento y manejo temprano del shock séptico.",
+      "fases": [
+        {
+          "id": "eval",
+          "nombre": "1) Identificación Temprana",
+          "puntos": [
+            "Hipotensión persistente.",
+            "Lactato ≥ 2 mmol/L.",
+            "Foco infeccioso probable.",
+            "FR > 22, confusión, hipotermia o fiebre."
+          ]
+        },
+        {
+          "id": "fluids",
+          "nombre": "2) Reanimación con Fluidos",
+          "puntos": [
+            "Cristaloides 30 ml/kg dentro de las primeras 3 horas.",
+            "Revaluar perfusión."
+          ]
+        },
+        {
+          "id": "vaso",
+          "nombre": "3) Vasopresores",
+          "puntos": [
+            "Norepinefrina: fármaco de elección.",
+            "Vasopresina como segundo agente.",
+            "Titulación para PAM ≥ 65 mmHg."
+          ]
+        },
+        {
+          "id": "abx",
+          "nombre": "4) Antibióticos",
+          "puntos": [
+            "Administrar dentro de la primera hora.",
+            "Cobertura de amplio espectro basada en foco probable."
+          ]
+        }
+      ],
+      "perlas": [
+        "Reevaluación continua del estado hemodinámico.",
+        "Evitar sobrecarga de fluidos en fases tardías."
+      ]
+    },
+    {
+  "id": "crisis_asmatica_2025",
+  "titulo": "Crisis Asmática – Manejo 2025",
+  "objetivo": "Guía de evaluación y manejo de crisis asmática según severidad.",
+  "fases": [
+    {
+      "id": "leve",
+      "nombre": "1) Crisis Leve",
+      "puntos": [
+        "Salbutamol 200 µg (puff) cada 20 min × 1 hora.",
+        "Prednisona 40 mg VO.",
+        "Observación 1–3 horas si buena respuesta."
+      ]
+    },
+    {
+      "id": "moderada",
+      "nombre": "2) Crisis Moderada",
+      "puntos": [
+        "Oxígeno hasta SatO₂ > 92%.",
+        "Salbutamol 400 µg (puff) o 5 mg nebulizado cada 20 min × 1 hora.",
+        "Ipratropio 80 µg (puff) o 0.25 mg nebulizado cada 20 min × 1 hora.",
+        "Metilprednisolona 40 mg VO o Hidrocortisona 200 mg EV."
+      ]
+    },
+    {
+      "id": "severa",
+      "nombre": "3) Crisis Severa",
+      "puntos": [
+        "Oxígeno hasta SatO₂ > 92%.",
+        "Salbutamol 5 mg nebulizado cada 20 min × 1 hora.",
+        "Ipratropio 0.25 mg nebulizado cada 20 min × 1 hora.",
+        "Metilprednisolona 40 mg VO o Hidrocortisona 200 mg EV.",
+        "Considerar Sulfato de Magnesio 2 g EV.",
+        "Solicitar EAB y radiografía de tórax."
+      ]
+    },
+    {
+      "id": "inminente",
+      "nombre": "4) Paro Respiratorio Inminente",
+      "puntos": [
+        "Oxígeno para mantener SatO₂ > 92%.",
+        "Salbutamol + Ipratropio nebulizados continuos.",
+        "Hidrocortisona 200 mg EV.",
+        "Sulfato de Magnesio 2 g EV.",
+        "Preparar vía aérea: posible intubación.",
+        "Solicitar EAB urgente y radiografía de tórax."
+      ],
+      "alerta": "Urgencia vital — considerar apoyo ventilatorio inmediato."
     }
+  ],
+  "perlas": [
+    "La ausencia de sibilancias puede indicar obstrucción crítica.",
+    "Evaluar respuesta clínica a las 1–3 horas.",
+    "Reevaluar signos vitales y SatO₂ constantemente."
+  ]
+}
   ]
 }

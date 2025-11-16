@@ -263,7 +263,9 @@ function ProtocolTeaserCard({ crit }) {
         <span className="text-body-secondary">{crit.categoria || "Protocolo"}</span>
       </div>
       <div className="card-body p-3 p-sm-3 p-md-4">
-        <p className="small text-body-secondary mb-3">{crit.descripcion || "Protocolo clínico."}</p>
+        <p className="small text-body-secondary mb-3 descripcion-lista">
+          {crit.descripcion || "Protocolo clínico."}
+        </p>
         <Link
           to={`/protocolos?r=${encodeURIComponent(crit.id)}`}
           className="btn btn-primary btn-sm"
